@@ -1,0 +1,168 @@
+[ 2016-11-07T15:41:07+08:00 ] ::1 /index.php/Home/Reg/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+ERR: 非法操作:index
+
+[ 2016-11-07T15:41:13+08:00 ] ::1 /index.php/Home/Reg/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8] Undefined variable: Request F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 97 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 101 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 101 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 155 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 191 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 208 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2016-11-07T15:41:13+08:00 ] ::1 /index.php/Home/Reg/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2016-11-07T15:56:38+08:00 ] ::1 /index.php/Home/Reg/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+NOTIC: [8] Undefined variable: Request F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 97 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 101 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 101 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 155 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 191 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 208 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007387s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007423s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000483s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-11-07T15:56:38+08:00 ] ::1 /index.php/Home/Reg/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2016-11-07T15:58:30+08:00 ] ::1 /index.php/Home/Reg/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-11-07T16:02:39+08:00 ] ::1 /index.php/Home/Reg/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined variable: Request F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 97 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 101 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 101 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 155 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 191 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 208 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000414s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2016-11-07T16:02:40+08:00 ] ::1 /index.php/Home/Reg/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-11-07T16:03:05+08:00 ] ::1 /index.php/Home/Reg/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+NOTIC: [8] Undefined variable: Request F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 97 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 101 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 101 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 155 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 191 行.
+NOTIC: [8] Undefined variable: type F:\misscake\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php 第 208 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008259s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008288s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2016-11-07T16:03:05+08:00 ] ::1 /index.php/Home/Reg/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+

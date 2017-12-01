@@ -1,0 +1,15 @@
+[ 2017-10-18T16:10:36+08:00 ] ::1 /index.php/Admin/Equipment/index
+ERR: 非法操作:index
+
+[ 2017-10-18T16:14:00+08:00 ] ::1 /index.php/Admin/Equipment/index
+ERR: 非法操作:index
+
+[ 2017-10-18T16:36:44+08:00 ] ::1 /index.php/Admin/Equipment/ajaxEquipmentList
+ERR: 模板不存在:./tpl/Admin/Equipment/ajaxEquipmentList.html
+
+[ 2017-10-18T16:44:47+08:00 ] ::1 /index.php/Admin/Equipment/ajaxEquipmentList
+ERR: 模板不存在:./tpl/Admin/Equipment/ajaxEquipmentList.html
+
+[ 2017-10-18T16:44:55+08:00 ] ::1 /index.php/Admin/Equipment/ajaxEquipmentList
+ERR: 模板不存在:./tpl/Admin/Equipment/ajaxEquipmentList.html
+

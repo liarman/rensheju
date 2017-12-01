@@ -1,0 +1,243 @@
+[ 2017-10-10T13:04:35+08:00 ] ::1 /index.php/App/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+NOTIC: [2] Missing argument 3 for Caesar::clientDecode(), called in F:\dangjian\Application\App\Controller\IndexController.class.php on line 20 and defined F:\dangjian\ThinkPHP\Library\Vendor\Caesar\Caesar.php 第 81 行.
+NOTIC: [8192] Non-static method Bytes::hexToBytes() should not be called statically, assuming $this from incompatible context F:\dangjian\ThinkPHP\Library\Vendor\Caesar\Caesar.php 第 53 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001904s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002054s ]
+
+[ 2017-10-10T13:05:02+08:00 ] ::1 /index.php/App/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000525s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2017-10-10T13:05:05+08:00 ] ::1 /index.php/App/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2017-10-10T14:23:02+08:00 ] ::1 /index.php/App/Index/news/catid/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+NOTIC: [2048] Declaration of Common\Model\NewscatModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\dangjian\Application\Common\Model\NewscatModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `qfant_newscat` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `qfant_newscat` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `qfant_newscat` WHERE `pid` = 23  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Array to string conversion F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 15 行.
+NOTIC: [8] Undefined variable: v F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000549s ]
+
+[ 2017-10-10T14:23:17+08:00 ] ::1 /index.php/App/Index/news/catid/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+NOTIC: [2048] Declaration of Common\Model\NewscatModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\dangjian\Application\Common\Model\NewscatModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `qfant_newscat` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `qfant_newscat` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `qfant_newscat` WHERE `pid` = 23  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: cat F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 15 行.
+NOTIC: [8] Undefined variable: v F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005832s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005868s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-10-10T14:23:44+08:00 ] ::1 /index.php/App/Index/news/catid/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+NOTIC: [2048] Declaration of Common\Model\NewscatModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\dangjian\Application\Common\Model\NewscatModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `qfant_newscat` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `qfant_newscat` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `qfant_newscat` WHERE `pid` = 23  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined index: catname F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 15 行.
+NOTIC: [8] Undefined variable: v F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005819s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005892s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000754s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2017-10-10T14:24:22+08:00 ] ::1 /index.php/App/Index/news/catid/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [2048] Declaration of Common\Model\NewscatModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\dangjian\Application\Common\Model\NewscatModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `qfant_newscat` [ RunTime:0.0173s ]
+
+[ 2017-10-10T14:24:29+08:00 ] ::1 /index.php/App/Index/news/catid/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+NOTIC: [2048] Declaration of Common\Model\NewscatModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\dangjian\Application\Common\Model\NewscatModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `qfant_newscat` [ RunTime:0.0036s ]
+SQL: SELECT `name` FROM `qfant_newscat` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `qfant_newscat` WHERE `pid` = 23  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined variable: cat F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 15 行.
+NOTIC: [8] Undefined variable: v F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2017-10-10T14:24:52+08:00 ] ::1 /index.php/App/Index/news/catid/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+NOTIC: [2048] Declaration of Common\Model\NewscatModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\dangjian\Application\Common\Model\NewscatModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `qfant_newscat` [ RunTime:0.0042s ]
+SQL: SELECT `name` FROM `qfant_newscat` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `qfant_newscat` WHERE `pid` = 23  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: cat F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 15 行.
+NOTIC: [8] Undefined variable: v F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000670s ]
+
+[ 2017-10-10T14:25:06+08:00 ] ::1 /index.php/App/Index/news/catid/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+NOTIC: [2048] Declaration of Common\Model\NewscatModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\dangjian\Application\Common\Model\NewscatModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `qfant_newscat` [ RunTime:0.0032s ]
+SQL: SELECT `name` FROM `qfant_newscat` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-10-10T14:25:19+08:00 ] ::1 /index.php/App/Index/news/catid/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [2048] Declaration of Common\Model\NewscatModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') F:\dangjian\Application\Common\Model\NewscatModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `qfant_newscat` [ RunTime:0.0119s ]
+SQL: SELECT `name` FROM `qfant_newscat` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `qfant_newscat` WHERE `pid` = 23  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: v F:\dangjian\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php 第 18 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006411s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000569s ]
+
+[ 2017-10-10T17:57:12+08:00 ] ::1 /index.php/App/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001208s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001305s ]
+
+[ 2017-10-10T17:57:35+08:00 ] ::1 /index.php/App/Index/groupindex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+NOTIC: [8] Undefined variable: town F:\dangjian\Runtime\Cache\App\d622b362f36cfc043b3e3436f63e0238.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049478s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001532s ]
+
