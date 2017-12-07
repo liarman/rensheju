@@ -6,8 +6,8 @@ return array(
     'DB_HOST'               =>  'localhost',     // 服务器地址
     //'DB_HOST'               =>  'localhost',     // 服务器地址
     'DB_NAME'               =>  'hr',     // 数据库名
-    'DB_USER'               =>  'hr',     // 用户名
-    'DB_PWD'                =>  'hr0558',      // 密码
-    'DB_PORT'               =>  '9990',     // 端口
+    'DB_USER'               =>  'root',     // 用户名
+    'DB_PWD'                =>  'root',      // 密码
+    'DB_PORT'               =>  '3306',     // 端口
     'DB_PREFIX'             =>  'qfant_',   // 数据库表前缀
 );

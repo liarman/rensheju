@@ -2,14 +2,14 @@
  * Created by Liarman on 2017/9/7.
  */
 function closes(){
-    $("#Loading").fadeOut("normal",function(){
+    $("#Loading").fadeOut("fast",function(){
         $(this).remove();
     });
 }
 var pc;
 $.parser.onComplete = function(){
-    if(pc) clearTimeout(pc);
-    pc = setTimeout(closes, 1000);
+     if(pc) clearTimeout(pc);
+    pc = setTimeout(closes, 500);
 }
 
 //图片添加路径

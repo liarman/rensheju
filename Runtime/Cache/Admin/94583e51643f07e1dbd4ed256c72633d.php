@@ -1,19 +1,30 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="/Public/statics/easyui/themes/default/easyui.css" rel="stylesheet" />
-    <link href="/Public/statics/easyui/themes/color.css" rel="stylesheet" />
-    <link href="/Public/statics/easyui/themes/icon.css" rel="stylesheet" />
-    <link href="/Public/statics/kindeditor/themes/default/default.css" rel="stylesheet" />
     <script src="/Public/statics/easyui/jquery.min.js"></script>
     <script src="/Public/statics/easyui/jquery.easyui.min.js"></script>
-    <script src="/Public/statics/easyui/common.js"></script>
     <script src="/Public/statics/easyui/locale/easyui-lang-zh_CN.js"></script>
-    <script src="/Public/statics/kindeditor/kindeditor-all-min.js"></script>
+    <link rel="stylesheet" href="/Public/statics/easyui/super/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Public/statics/easyui/super/superRed.css" id="themeCss">
+    <script src="/Public/statics/easyui/super/super.js"></script>
+    <script src="/tpl/Admin/Public/js/index.js" type="text/javascript" charset="utf-8"></script>
+    <link href="/Public/statics/css/admin.css" rel="stylesheet" />
+    <script src="/Public/statics/easyui/common.js"></script>
+    <script src="/Public/statics/easyui/formatter.js"></script>
+    <script src="/Public/statics/easyui/extend/validate.js"></script>
+    <script src="/Public/statics/kindeditor/kindeditor-all.js"></script>
+    <script src="/Public/statics/kindeditor/lang/zh-CN.js"></script>
+    <script type="text/javascript">
+        var addTownUrl="<?php echo U('Admin/Town/addTown');?>";
+        var editTownUrl="<?php echo U('Admin/Town/editTown');?>";
+        var deleteTownUrl="<?php echo U('Admin/Town/deleteTown');?>";
+    </script>
 </head>
 <body>
 <div id='Loading' style="position:absolute;z-index:1000;top:0px;left:0px;width:100%;height:100%;background:#fff ;text-align:center;padding-top: 10%;">
-    <h1><image src='/tpl/Public/images/loading3.gif'/></h1></div>
+    <h1><image src="/rensheju1/tpl/Public/images/loading3.gif"/></h1>
+</div>
+<script src="/tpl/Admin/Public/js/town.js" type="text/javascript" charset="utf-8"></script>
 <table id="townGrid" class="easyui-datagrid" style="width:92%;height:800px" url="<?php echo U('Admin/Town/ajaxTownList');?>" pagination="true"  toolbar="#toolbar" singleSelect="true" rownumbers="true" idField="id" treeField="name" pageSize="20">
     <thead>
     <tr>
@@ -24,9 +35,9 @@
     </thead>
 </table>
 <div id="toolbar">
-    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addTown()">添加</a>
-    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editTown()">编辑</a>
-    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyTown()">删除</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="fa fa-plus" plain="true" onclick="addTown()">添加</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="fa fa-edit" plain="true" onclick="editTown()">编辑</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="fa fa-remove" plain="true" onclick="destroyTown()">删除</a>
 </div>
 <!-- 添加 -->
 <div id="addTown" class="easyui-dialog" title="添加" style="width:800px;height:650px;padding:10px 20px;" closed="true" modal="true">
@@ -91,102 +102,5 @@
     </form>
 </div>
 </body>
-<script type="text/javascript">
-    var editor;
-    KindEditor.ready(function(K) {
-        editor = K.create('.baseinfo', {
-            allowFileManager : false
-        });
-    });
-    var editor2;
-    KindEditor.ready(function(K) {
-        editor2 = K.create('.editbaseinfo', {
-            allowFileManager : false
-        });
-    });
-    var url;
-    function addTown(){
-        $('#addTown').dialog('open').dialog('setTitle','添加');
-        $('#addTownForm').form('clear');
-        url="<?php echo U('Admin/Town/addTown');?>";
-    }
-    function addTownSubmit(){
-        $('.baseinfo').val(editor.html());
-        $('#addTownForm').form('submit',{
-            url: url,
-            onSubmit: function(){
-                return $(this).form('validate');
-            },
-            success:function(data){
-                data=$.parseJSON(data);
-                if(data.status==1){
-                    $.messager.alert('Info', data.message, 'info');
-                    $('#addTown').dialog('close');
-                    $('#townGrid').datagrid('reload');
-                }else {
-                    $.messager.alert('Warning', data.message, 'info');
-                    $('#addTown').dialog('close');
-                    $('#townGrid').datagrid('reload');
-                }
-            }
-        });
-    }
-    function editTownSubmit(){
-        $('.editbaseinfo').val(editor2.html());
-        $('#editTownForm').form('submit',{
-            url: url,
-            onSubmit: function(){
-                return $(this).form('validate');
-            },
-            success:function(data){
-                data=$.parseJSON(data);
-                if(data.status==1){
-                    $.messager.alert('Info', data.message, 'info');
-                    $('#editTown').dialog('close');
-                    $('#townGrid').datagrid('reload');
-                }else {
-                    $.messager.alert('Warning', data.message, 'info');
-                    $('#editTown').dialog('close');
-                    $('#townGrid').datagrid('reload');
-                }
-            }
-        });
-    }
-    //编辑会员对话窗
-    function editTown(){
-        var row = $('#townGrid').datagrid('getSelected');
-        if(row==null){
-            $.messager.alert('Warning',"请选择要编辑的行", 'info');return false;
-        }
-        if (row){
-            editor2.html(row.baseinfo);
-            $('#editTown').dialog('open').dialog('setTitle','编辑');
-            $('#editTownForm').form('load',row);
-            url ="<?php echo U('Admin/Town/editTown');?>"+'/id/'+row.id;
-        }
-    }
-    function destroyTown(){
-        var row = $('#townGrid').datagrid('getSelected');
-        if(row==null){
-            $.messager.alert('Warning',"请选择要删除的行", 'info');return false;
-        }
-        if (row){
-            $.messager.confirm('删除提示','真的要删除?',function(r){
-                if (r){
-                    var durl="<?php echo U('Admin/Town/deleteTown');?>";
-                    $.getJSON(durl,{id:row.id},function(result){
-                        if (result.status){
-                            $('#townGrid').datagrid('reload');    // reload the user data
-                        } else {
-                            $.messager.alert('错误提示',result.message,'error');
-                        }
-                    },'json').error(function(data){
-                        var info=eval('('+data.responseText+')');
-                        $.messager.confirm('错误提示',info.message,function(r){});
-                    });
-                }
-            });
-        }
-    }
-</script>
+
 </html>
