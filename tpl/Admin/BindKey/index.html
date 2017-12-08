@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>管理后台</title>
+    <script src="__EASYUI__/jquery.min.js"></script>
+    <script src="__EASYUI__/jquery.easyui.min.js"></script>
+    <script src="__EASYUI__/locale/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" href="__EASYUI__/super/css/font-awesome.min.css">
+    <link rel="stylesheet" href="__EASYUI__/super/superRed.css" id="themeCss">
+    <script src="__EASYUI__/super/super.js"></script>
+    <script src="__ADMIN_JS__/index.js" type="text/javascript" charset="utf-8"></script>
+    <link href="__PUBLIC__/statics/css/admin.css" rel="stylesheet" />
+    <script src="__EASYUI__/common.js"></script>
+    <script src="__EASYUI__/formatter.js"></script>
+    <script src="__EASYUI__/extend/validate.js"></script>
+    <script src="__KINDEDITOR__/kindeditor-all.js"></script>
+    <script src="__KINDEDITOR__/lang/zh-CN.js"></script>
+    <script type="text/javascript">
+        var addBindkeyUrl="{:U('Admin/BindKey/add')}";
+        var deleteBindkeyUrl="{:U('Admin/BindKey/delete')}";
+        var ajaxBindkeyUrl="{:U('Admin/BindKey/ajaxList')}";
+    </script>
+</head>
+<body style="padding: 0">
+<div id='Loading' style="position:absolute;z-index:1000;top:0px;left:0px;width:100%;height:100%;background:#fff ;text-align:center;padding-top: 10%;">
+</div>
+<script src="__ADMIN_JS__/bindkey.js" type="text/javascript" charset="utf-8"></script>
+<table id="BindKeyGrid" class="easyui-datagrid"  url="{:U('Admin/BindKey/ajaxList')}" pagination="true"  toolbar="#toolbar_bindkey" singleSelect="true" rownumbers="true"pageSize="20">
+    <thead>
+    <tr>
+        <th field="key" width="200" >秘钥</th>
+        <th field="status" width="200" formatter="attrValue" >是否可用</th>
+        <th field="dizhi" width="200"formatter="attrValue" >城市</th>
+        <th field="action" width="200" align="center" formatter="formatAction">操作</th>
+    </tr>
+    </thead>
+</table>
+<div id="toolbar_bindkey">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="fa fa-plus" plain="true" onclick="add()">添加密钥</a>
+    秘钥:<input class="easyui-textbox" style="width:110px" name="key" id="keysearch">
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="doSearch()" iconCls="icon-search">搜索</a>
+</div>
+<div id="addBind" class="easyui-dialog" title="添加" style="width:450px;height:500px;padding:10px 20px;" closed="true" modal="true">
+    <form id="addBindForm" method="post">
+        <table>
+            <tr>
+                <td>城市:</td>
+                <td>
+                    <select  panelMaxHeight="180px" name="chengshi" class="easyui-combobox" style="width:174px" data-options="delay:1000,required:true,multiple:false">
+                        <option value="0">亳州</option>
+                        <option value="1">谯城区</option>
+                        <option value="2">涡阳县</option>
+                        <option value="3">利辛县</option>
+                        <option value="4">蒙城县</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="addBindSubmit()" style="width:90px">保存</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#addBind').dialog('close')" style="width:90px">取消</a></td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+</body>
+</html>
