@@ -13,6 +13,12 @@ class AppBaseController extends BaseController{
 
 	}
 
+	public  function checkIsLonginUser($userId,$token){
+		$loginExpireTime = C(APP_CONFIG.LOGIN_EXPIRE_TIME);
+		$sql ="select log.id from  qfant_login_logger log where log.type=1 AND log.customer_Id='$userId' and log.loginIden='$token' AND TO_DAYS(NOW())-TO_DAYS(log.loginTime)<= '$loginExpireTime'";
+		$data=D('LoginLogger')->query($sql,"");
+		return $data[0];
+	}
 
 
 
