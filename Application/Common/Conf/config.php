@@ -110,4 +110,12 @@ return array(
         'APPSECRET'          => '',  //公众帐号secert
         'NOTIFY_URL'         => 'http://baijunyao.com/Api/WeixPay/notify/order_number/', // 接收支付状态的连接
         ),
+    'APP_CONFIG'       => array(
+        'LOGIN_EXPIRE_TIME'              => 30, // 登录过期时间
+    ),
+    'APP_STATUS'       => array(
+        'STATUS_CODE_NOT_LOGIN'              => 600, // 登录失效
+        'STATUS_CODE_SUCCESS'              => 0, // 请求成功
+        'STATUS_CODE_FAIL'              => -1, // 请求失败
+    )
 );
