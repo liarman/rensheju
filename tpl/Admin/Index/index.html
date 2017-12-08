@@ -6,34 +6,39 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	 <script type="text/javascript">
+		var clearcachUrl="{:U('Admin/System/clearCache')}";
+		var setPwdUrl="{:U('Admin/User/setPassword')}";
+		var logoutUrl="{:U('Admin/User/logout')}";
+		var indexUrl="{:U('Admin/Login/index')}";
+         var loginUrl="{:U('Admin/Login/index')}";
+	 </script>	
     <script src="__EASYUI__/jquery.min.js"></script>
     <script src="__EASYUI__/jquery.easyui.min.js"></script>
     <script src="__EASYUI__/locale/easyui-lang-zh_CN.js"></script>
-    <link href="__PUBLIC__/statics/css/admin.css" rel="stylesheet" />
     <link rel="stylesheet" href="__EASYUI__/super/css/font-awesome.min.css">
     <link rel="stylesheet" href="__EASYUI__/super/superRed.css" id="themeCss">
     <script src="__EASYUI__/super/super.js"></script>
     <script src="__ADMIN_JS__/index.js" type="text/javascript" charset="utf-8"></script>
-
-
+    <link href="__PUBLIC__/statics/css/admin.css" rel="stylesheet" />
     <script src="__EASYUI__/common.js"></script>
     <script src="__EASYUI__/formatter.js"></script>
     <script src="__EASYUI__/extend/validate.js"></script>
-    <script type="text/javascript">
-        var LogoutUrl= "{:U('Admin/Login/logout')}";
-        var LoginUrl= "{:U('Admin/Login/index')}";
-    </script>
-    <script src="__ADMIN_JS__/index.js" type="text/javascript" charset="utf-8"></script>
 
 </head>
 <body id="main" class="easyui-layout">
-
+<noscript>
+    <div style="position: absolute; z-index: 100000; height: 2046px; top: 0px; left: 0px;
+            width: 100%; background: white; text-align: center;">
+        <img src="images/noscript.gif" alt='抱歉，请开启脚本支持！' />
+    </div>
+</noscript>
 <!--顶部-->
 <div data-options="region:'north',border:false" class="super-north">
     <!--顶部-->
     <div class="super-navigation">
         <!--系统名称-->
-        <div class="super-navigation-title">后台管理系统</div>
+        <div class="super-navigation-title">物业后台管理系统</div>
         <!--自定义导航-->
         <div class="super-navigation-main">
             <div class="super-setting-left">
@@ -48,11 +53,11 @@
                             <i class="fa fa-gears"></i>
                         </div>
                         <div id="mm" class="easyui-menu">
-                            <div id="clearCache"><a ></a>更新缓存</div>
+                            <div id="clearCache" onclick="clearCache();">更新缓存</div>
                             <div id="set"> <a ></a>设置</div>
                             <div id="themeSetting">主题</div>
                             <div class="menu-sep"></div>
-                            <div id="logout"><a onclick="logout()"></a>退出</div>
+                            <div id="log"><a href="{:U('Admin/Login/logout')}"></a>退出</div>
                         </div>
                     </li>
                     <li class="user">
@@ -83,9 +88,6 @@
         </foreach>
     </div>
 </div>
-
-
-</div>
 <div data-options="region:'center'" style="padding-top: 2px;">
     <!--主要内容-->
     <div id="qfantTabs" class="easyui-tabs" data-options="border:false,fit:true">
@@ -101,7 +103,6 @@
         <span><i class="fa fa-copyright"></i>启凡科技 CopyRight 2017 版权所有 <i class="fa fa-caret-right"></i></span>
     </div>
 </div>
-
 
 <!--主题设置弹窗-->
 <div id="win">
@@ -149,12 +150,11 @@
             <input class="easyui-passwordbox" name="password2" style="width:80%" data-options="label:'密码确认:',required:true,validType:'equalTo[\'#infoPassword\']'">
         </div>
         <div style="text-align:center;padding:5px 0">
-            <a id="submit"    class="easyui-linkbutton" style="width:80px">提交</a>
+            <a id="submit"    class="easyui-linkbutton" style="width:80px" href="javascript:void(0);" onclick="setinfo();">提交</a>
             <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearform()" style="width:80px">取消</a>
         </div>
     </form>
 </div>
-
 </body>
 
 </html>
