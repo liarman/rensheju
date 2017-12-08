@@ -45,6 +45,7 @@ class UserController extends AdminBaseController{
 				$message['message']='修改密码失败';
 			}
 		}
+		$this->ajaxReturn($message,'JSON');
 	}
 
 
