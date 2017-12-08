@@ -15,7 +15,16 @@ class EquipmentController extends WapController{
     }
    
     public function district(){
-        $this->display();
+		$wecha_id=$this->wecha_id;
+		$data1=D('Binding')->where(array('wecha_id'=>$wecha_id))->find();
+		if($data1['key']){
+			$data=D('Bindkey')->where(array('key'=>$data1['key']))->find();
+			if($data['key']==0){
+				$this->display();
+			}else{
+				$this->redirect('App/Equipment/listcamera', array('type' =>$data['key']));
+			}
+		}
     }
 	public function listcamera(){
 		$type=I("get.type",1);
