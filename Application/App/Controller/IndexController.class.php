@@ -30,26 +30,25 @@ class IndexController extends AppBaseController
 
     public function towns()
     {
-        // if(IS_POST){
-        $key = I("post.key");
-        $b = I("post.b");
-        $towns = D("Town")->select();
-        foreach ($towns as $k => $val) {
-            $villages = D("Village")->where(array('townid' => $val['id']))->select();
-            foreach ($villages as $k2 => $val2) {
-                $villages[$k2]['principal'] = $val['contact'];//负责人
-                $villages[$k2]['mobile'] = $val['mobile'];//负责人电话
-                $villages[$k2]['boundary'] = D("VillageBoundary")->where(array('villageid' => $val2['id']))->select();
+        if(IS_POST){
+            $key = I("post.key");
+            $b = I("post.b");
+            $towns = D("Town")->select();
+            foreach ($towns as $k => $val) {
+                $villages = D("Village")->where(array('townid' => $val['id']))->select();
+                foreach ($villages as $k2 => $val2) {
+                    $villages[$k2]['principal'] = $val['contact'];//负责人
+                    $villages[$k2]['mobile'] = $val['mobile'];//负责人电话
+                    $villages[$k2]['boundary'] = D("VillageBoundary")->where(array('villageid' => $val2['id']))->select();
+                }
+                $towns[$k]['children'] = $villages;
+                $towns[$k]['boundary'] = D("TownBoundary")->where(array('townid' => $val['id']))->select();
             }
-            $towns[$k]['children'] = $villages;
-            $towns[$k]['boundary'] = D("TownBoundary")->where(array('townid' => $val['id']))->select();
+            $data['bstatus']['code'] = 0;
+            $data['bstatus']['message'] = '获取成功';
+            $data['townResult'] = $towns;
+            echo $this->caesar->clientEncode($key, json_encode($data));
         }
-        $data['bstatus']['code'] = 0;
-        $data['bstatus']['message'] = '获取成功';
-        $data['data'] = $towns;
-        //print_r(json_encode($data));die;
-        echo $this->caesar->clientEncode($key, json_encode($data));
-        //  }
     }
 
     public function villages()
