@@ -14,7 +14,6 @@ class PersonController extends AdminBaseController
     public function index()
     {
         $this->display();
-
     }
 
     public function ajaxPersonList()
