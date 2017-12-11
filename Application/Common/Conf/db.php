@@ -3,7 +3,7 @@ return array(
 
 //*************************************数据库设置*************************************
     'DB_TYPE'               =>  'mysql',                 // 数据库类型
-    'DB_HOST'               =>  '192.168.0.254',     // 服务器地址
+    'DB_HOST'               =>  'localhost',     // 服务器地址
     //'DB_HOST'               =>  'localhost',     // 服务器地址
     'DB_NAME'               =>  'rensheju',     // 数据库名
     'DB_USER'               =>  'rensheju',     // 用户名

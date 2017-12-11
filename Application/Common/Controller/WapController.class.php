@@ -40,7 +40,7 @@ class WapController extends BaseController{
 				$scope='snsapi_base';
 			}*/
 
-			if ( (!$_GET['wecha_id'] || urldecode($_GET['wecha_id']) == '{wechat_id}') && $_GET['wecha_id'] != 'no' && !isset($_GET['code'])){
+			if ( !$_GET['wecha_id']  && $_GET['wecha_id'] != 'no' && !isset($_GET['code'])){
 				$customeUrl=$this->siteUrl.$_SERVER['REQUEST_URI'];
 				
 				$oauthUrl='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->_appid.'&redirect_uri='.urlencode($customeUrl).'&response_type=code&scope='.$scope.'&state=oauth#wechat_redirect';

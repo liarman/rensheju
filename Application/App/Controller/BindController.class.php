@@ -50,7 +50,7 @@ class BindController extends AppBaseController{
 			}
            
         }else {
-            $wecha_id=$this->wecha_id;
+            $wecha_id=I("get.wecha_id");
             $this->assign('wecha_id',$wecha_id);
             $this->display();
         }
