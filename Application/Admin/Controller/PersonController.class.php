@@ -53,8 +53,8 @@ class PersonController extends AdminBaseController
             $data["headimg"] = I("post.headimg");
             $result = D('Person')->addData($data);
             if ($result) {
-                $message['status'] = 1;
-                $message['message'] = '添加菜单成功';
+                 $message['status'] = 1;
+                 $message['message'] = '添加菜单成功';
             } else {
                 $message['status'] = 0;
                 $message['message'] = '添加菜单失败';
