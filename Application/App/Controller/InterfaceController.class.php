@@ -63,7 +63,6 @@ class InterfaceController extends AppBaseController{
                 $data['bstatus']['code'] = 0;
                 $data['bstatus']['message'] = '获取成功';
                 $data['personsResult'] = $workers;
-        print  $data['personsResult'][0];die;
       }else{
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
                 $data['bstatus']['message'] = '登录失效，请重新登录';
@@ -129,7 +128,7 @@ class InterfaceController extends AppBaseController{
                     if($equipment['status']==0){
                         $data['bstatus']['code']=-2;
                         $data['bstatus']['des']='设备已离线或取消分享';
-                    }else {
+                       }else {
                         $data['bstatus']['code']=0;
                         $data['bstatus']['des']='获取成功';
                         $data['data']=$equipment;
