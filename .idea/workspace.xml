@@ -2,205 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5864edfa-8827-4a06-b6a0-7c6511831810" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\.idea\dangjian.iml" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\.idea\hr.iml" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\.idea\tianyun.iml" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.ios.colors.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.ios.colors.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.ios.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.ios.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.ios.rtl.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.ios.rtl.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.material.colors.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.material.colors.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.material.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.material.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.material.rtl.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\framework7.material.rtl.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\css\my-app.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-f7-ios.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-f7-material.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-calendar-ios.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-calendar-material.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-comment-ios.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-comment-material.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-email-ios.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-email-material.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-gender-ios.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-gender-material.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-name-ios.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-name-material.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-password-ios.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-password-material.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-settings-ios.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-settings-material.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-tel-ios.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-tel-material.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-toggle-ios.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-toggle-material.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-url-ios.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\img\i-form-url-material.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\js\framework7.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\js\framework7.js.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\js\framework7.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\js\framework7.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Public\statics\Framework7-1.2.0\js\my-app.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\0501b6c11efb9696eecbaa7b7f1583ad.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\0936a656e934ea20e36fde4898fd9257.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\0bb7ea5bb2f65bf48beb7c2e20c800ca.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\0dbd58d559fbc0c32cd847a6f2ad9b3b.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\109efeb9e6a98da5aea3c20a9e4a0b7e.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\1b0c2cd67af183c2ce789040a5abe59a.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\2e67fc7ee2995491399d66c41782b64d.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\358e23fa11cf7d1c3cc0bb77e997bc8a.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\3b05aa252c3b3907fbfedbff9500c6ce.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\42298023b73fa750c7c6ebd32a8431e4.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\42b4a17b2d28d7ef25b2e74ab8e896ae.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\4614a771ebb715984cb5c4a65cacffa9.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\494c71f04278051610a094f2e6f2773f.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\505deaf2a4c8d282661360eb57841185.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\51ac006b8d07637e87dbf486e9bc19a9.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\53d617586cb72aca65fb43041f4355e6.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\5bfba29f4f397feb2020b3d0b41eaa81.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\5c13ef522d5632791acd99f4b041492c.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\5ce1a8bec14386ff2537d77b6b9b8b63.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\6038a076e27391ce85796e302bf6ea76.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\60f5c48b2cae18bd5d5c9551dbf798cd.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\6260bc0c503afc09a0d71c7ed9350649.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\6504ab0c2910073a987162f77ed301b4.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\673b33765d03e48e5d18d894606391d1.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\6ad2618cfeaf274b0ca5b7a7664da2e7.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\6f1b8297a3433e107dfdba355b7c9ac0.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\774c9ca7a8d9f4f88a524921bb46cd30.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\83df966075b2edcfa9dd7158c5cdaacc.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\83f8ba4826aa4e17cbdde3c65df3a3aa.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\8c51ac44e57971b15d8ce290c7ae2ff6.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\9925d402c6b0497645ce2b0f1240345a.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\a13a4326fbf102910224b76f5897ff37.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\a37d4fa95a6d41bfcc05e78c23ad8744.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\a4db0b3fd0e551af604b4d169f776941.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\a6c5fefe53e91c9ab431404d001a6160.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\ae1670bf0f83a45e6004cb7dbb117300.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\af80390491032ad1ccf3e774effe3085.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\b26618ed0dfaf162f2e5508eab089d59.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\b2a25689929bf01b5c322fb50100f7b1.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\ba7ca967327385ade4d4fa4d4e063bb2.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\bf3cdcc460c61248889fc3c1302d20a1.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\c133fa34b65ea9896b5a14309044f202.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\c24f369bf487592a1c53cff42f776ace.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\c34ee256dcfeb7a611a5f337380c9413.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\c93007d6859798c41f822f61d734d0fe.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\c9b723a94509efd0413471979ca45d32.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\ca08ac9773b9322379f54e47393e07fa.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\d79aee004e328191bdb82bdde79e04fd.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\e20e45d69656c07b39297934ded8f1a0.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\ec3035cc341b91b10f65f1bcae4d2132.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\eeffa0c11af10e330d665749404a9e02.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\f6432d3255dd99a20aa2254961abd55d.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\fb8e5cbcd2bd2be34802ea7f42ce7bb8.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Admin\fdd9932460b682cddf05947ab7b751f3.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\0c461080faad908719c2c09742620ec8.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\0cb848f69b32574807dabd3d9d0d08e6.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\2aafc1709e2fcdb26c8eb31641d99ade.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\34cdb973522a7a53a2686c0312080a8d.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\3c760f1240eeee186e5f34a0fac4b4fa.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\454e151e3c8fa909e5d81fa0c0feafab.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\69eb29987482e45ead3f7e81aea86b4c.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\73235bd2af81bc812c8e6c57d8269be2.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\85c14fc73559cfb25c130bba37d50b75.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\892670b62fad507b80feb0fd0496b6ed.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\96278fc1c629093a717d07a90d55f737.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\d149bb6f6cced0f7037f758b83e9fb81.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\d622b362f36cfc043b3e3436f63e0238.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\e8cf7221daf2b674bfd727bb9a0b93bd.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\f0f09d9cd534397e1977b57209bd9379.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\f7e1579ac10e11683f9a01c87a1923dc.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\App\ff0daba8642df4598aee903c0b4c6bf0.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Home\1ffa157695197e3690cd8f0a51619669.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Home\2584536453d103c05d37ea4861b9b537.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Home\c1d74ac33519242f0c22588c294c5899.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Home\cf67dc478d0f9143c4e32b762444702a.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Home\d678f280cf84122e981f201997603ea5.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Cache\Home\dcf20f698367de285071376dfd8c1fc5.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Data\_fields\qfant_admin_nav.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Data\_fields\qfant_auth_group.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Data\_fields\qfant_auth_rule.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Data\_fields\qfant_binding.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Data\_fields\qfant_bindkey.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Data\_fields\qfant_equipment.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Data\_fields\qfant_login_admin.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Data\_fields\qfant_openinfo.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Data\_fields\qfant_users.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Admin\17_10_18.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\1506677704-17_09_29.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\1506677754-17_09_29.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\1506677771-17_09_29.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\1506677812-17_09_29.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\1506677851-17_09_29.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\1506681631-17_09_29.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_09_29.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_09_30.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_10_01.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_10_02.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_10_04.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_10_06.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_10_08.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_10_09.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_10_10.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_10_11.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\App\17_11_24.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Common\16_10_10.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Common\16_11_01.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Common\17_11_16.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Common\17_11_17.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Common\17_11_18.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Common\17_11_19.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Common\17_11_20.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Common\17_11_22.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\16_10_08.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\16_10_09.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\16_10_11.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\16_10_21.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\16_10_24.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\16_11_01.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\16_11_07.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\17_07_26.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\17_09_20.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\17_09_30.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\17_10_01.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\17_10_02.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\17_10_03.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\17_10_04.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\Logs\Home\17_10_09.log" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\hrDoc\rensheju\Runtime\common~runtime.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/27901e11bfec172758f2a0f152a78bf3.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Admin/27901e11bfec172758f2a0f152a78bf3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/94583e51643f07e1dbd4ed256c72633d.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Admin/94583e51643f07e1dbd4ed256c72633d.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/statics/css/admin.css" afterPath="$PROJECT_DIR$/Public/statics/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Rule/admin_user_list.html" afterPath="$PROJECT_DIR$/tpl/Admin/Rule/admin_user_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/statics/easyui/common.js" afterPath="$PROJECT_DIR$/Public/statics/easyui/common.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/27901e11bfec172758f2a0f152a78bf3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/60f5c48b2cae18bd5d5c9551dbf798cd.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/94583e51643f07e1dbd4ed256c72633d.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/c24f369bf487592a1c53cff42f776ace.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/d79aee004e328191bdb82bdde79e04fd.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/dc1456483c98b01449c24e83886c228f.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Data/_fields/qfant_admin_nav.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Data/_fields/qfant_auth_group.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Data/_fields/qfant_bindkey.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Data/_fields/qfant_equipment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Data/_fields/qfant_users.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/App/Controller/CustomerController.class.php" afterPath="$PROJECT_DIR$/Application/App/Controller/CustomerController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/config.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/db.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/dc1456483c98b01449c24e83886c228f.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Admin/dc1456483c98b01449c24e83886c228f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Rule/group.html" afterPath="$PROJECT_DIR$/tpl/Admin/Rule/group.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/AppWeixin/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/AppWeixin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/CustomNav/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/CustomNav/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Equipment/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/Equipment/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Index/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/Index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Link/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/Link/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Meet/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/Meet/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Nav/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/Nav/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/News/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/News/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Notice/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/Notice/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Rule/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/Rule/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Town/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/Town/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tpl/Admin/Village/index.html" afterPath="$PROJECT_DIR$/tpl/Admin/Village/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/statics/easyui/jquery.easyui.min.js" afterPath="$PROJECT_DIR$/Public/statics/easyui/jquery.easyui.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Data/_fields/qfant_village.php" afterPath="$PROJECT_DIR$/Runtime/Data/_fields/qfant_village.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/common~runtime.php" afterPath="$PROJECT_DIR$/Runtime/common~runtime.php" />
     </list>
     <ignored path="rensheju.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -212,7 +31,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -221,17 +39,65 @@
     <favorites_list name="rensheju" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/App/Controller/CustomerController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-9">
+              <caret line="150" column="21" lean-forward="true" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
+              <folding>
+                <marker date="1512957188308" expanded="true" signature="14670:14787" ph="select v.nam... qfant_village" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterfaceController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/App/Controller/InterfaceController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              <folding>
+                <marker date="1512726677284" expanded="true" signature="649:688" ph="select * fro... qfant_notice" />
+                <marker date="1512726677284" expanded="true" signature="1895:1962" ph="select * fro... qfant_workers" />
+                <marker date="1512726677284" expanded="true" signature="3150:3192" ph="select * fro... qfant_equipment" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
+        <option value="$PROJECT_DIR$/Application/Common/Model/LoginLoggerModel.class - 副本.php" />
+        <option value="$PROJECT_DIR$/Application/Common/Model/LoginLoggerModel.class.php" />
+        <option value="$PROJECT_DIR$/Application/Common/Conf/config.php" />
+        <option value="$PROJECT_DIR$/Application/Common/Controller/AppBaseController.class.php" />
+        <option value="$PROJECT_DIR$/Application/App/Controller/CustomerController.class.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-  </component>
-  <component name="NamedScopeManager">
-    <order />
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -239,16 +105,6 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -261,6 +117,8 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="ProjectPane">
@@ -270,15 +128,9 @@
               <option name="myItemId" value="rensheju" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="rensheju" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rensheju" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -288,11 +140,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rensheju" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -302,31 +154,129 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rensheju" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rensheju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rensheju" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rensheju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rensheju" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rensheju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rensheju" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Conf" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rensheju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rensheju" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zy" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -340,49 +290,104 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5864edfa-8827-4a06-b6a0-7c6511831810" name="Default" comment="" />
       <created>1512638196130</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1512638196130</updated>
+      <workItem from="1512700629275" duration="17070000" />
+      <workItem from="1512954943543" duration="1795000" />
+      <workItem from="1512956806818" duration="25000" />
+      <workItem from="1512956839917" duration="1341000" />
     </task>
+    <task id="LOCAL-00001" summary="接口提交">
+      <created>1512727484598</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1512727484598</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="20231000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="接口提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="接口提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -391,25 +396,229 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="160">
+          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/App/Controller/CustomerController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1512957188308" expanded="true" signature="14670:14787" ph="select v.nam... qfant_village" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/App/Controller/InterfaceController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <marker date="1512726677284" expanded="true" signature="649:688" ph="select * fro... qfant_notice" />
+            <marker date="1512726677284" expanded="true" signature="1895:1962" ph="select * fro... qfant_workers" />
+            <marker date="1512726677284" expanded="true" signature="3150:3192" ph="select * fro... qfant_equipment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/App/Controller/CustomerController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1512957188308" expanded="true" signature="14670:14787" ph="select v.nam... qfant_village" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/App/Controller/InterfaceController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <marker date="1512726677284" expanded="true" signature="649:688" ph="select * fro... qfant_notice" />
+            <marker date="1512726677284" expanded="true" signature="1895:1962" ph="select * fro... qfant_workers" />
+            <marker date="1512726677284" expanded="true" signature="3150:3192" ph="select * fro... qfant_equipment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/App/Controller/CustomerController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4416">
+          <caret line="138" column="47" lean-forward="true" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
+          <folding>
+            <marker date="1512957188308" expanded="true" signature="14670:14787" ph="select v.nam... qfant_village" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/App/Controller/InterfaceController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <marker date="1512726677284" expanded="true" signature="649:688" ph="select * fro... qfant_notice" />
+            <marker date="1512726677284" expanded="true" signature="1895:1962" ph="select * fro... qfant_workers" />
+            <marker date="1512726677284" expanded="true" signature="3150:3192" ph="select * fro... qfant_equipment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Controller/AdminBaseController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/LoginController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Model/LoginLoggerModel.class - 副本.php" />
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-943">
+          <caret line="318" column="20" lean-forward="false" selection-start-line="318" selection-start-column="20" selection-end-line="318" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Model/MeetContentModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Model/AdminNavModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Model/CustomerModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Model/LoginLoggerModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/App/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+          <folding>
+            <marker date="1512715686010" expanded="true" signature="10019:10136" ph="select v.nam... qfant_village" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Model/MeetUserModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Model/BaseModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Controller/AppBaseController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1014">
+          <caret line="118" column="39" lean-forward="true" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Controller/AdminBaseController.class.php">
+    <entry file="file://$PROJECT_DIR$/Application/App/Controller/InterfaceController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72417706">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="384">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <marker date="1512726677284" expanded="true" signature="649:688" ph="select * fro... qfant_notice" />
+            <marker date="1512726677284" expanded="true" signature="1895:1962" ph="select * fro... qfant_workers" />
+            <marker date="1512726677284" expanded="true" signature="3150:3192" ph="select * fro... qfant_equipment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/App/Controller/CustomerController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="150" column="21" lean-forward="true" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
+          <folding>
+            <marker date="1512957188308" expanded="true" signature="14670:14787" ph="select v.nam... qfant_village" />
+          </folding>
         </state>
       </provider>
     </entry>

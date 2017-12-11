@@ -108,7 +108,7 @@ return array(
         'MCHID'              => '', // 微信支付MCHID 商户收款账号
         'KEY'                => '', // 微信支付KEY
         'APPSECRET'          => '',  //公众帐号secert
-        'NOTIFY_URL'         => 'http://baijunyao.com/Api/WeixPay/notify/order_number/', // 接收支付状态的连接
+        'NOTIFY_URL'         => 'http://baijunyao.com/Api/WeixPay/notify/order_number/1', // 接收支付状态的连接
         ),
     'APP_CONFIG'       => array(
         'LOGIN_EXPIRE_TIME'              => 30, // 登录过期时间

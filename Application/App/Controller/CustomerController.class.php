@@ -132,12 +132,29 @@ class CustomerController extends AppBaseController
                 foreach ($village as $k => $v){
                     $res['townResult'][$key]['village'][$k]['id'] = $v['id'];
                     $res['townResult'][$key]['village'][$k]['name'] = $v['name'];
+                    $townid = $val['id'];
+                    $villageid = $v['id'];
+                    $person = D('Person')->where(array('townid'=>$townid,'villageid'=>$villageid))->select();
+                    //print_r($person = D('Person')->where(array('townid'=>$townid,'villageid'=>$villageid))->select());
+                    foreach ($person as $ki => $vi){
+                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['id'] = $vi['id'];
+                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['name'] = $vi['name'];
+                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['age'] = $vi['age'];
+                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['phone'] = $vi['phone'];
+                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['address'] = $vi['address'];
+                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['iden'] = $vi['iden'];
+                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['bank'] = $vi['bank'];
+                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['banknum'] = $vi['banknum'];
+                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['headimg'] = $vi['headimg'];
+                        $result['personsResult'] = $res['townResult'][$key]['village'][$k]['personsResult'][$ki];
+
+                    }
                 }
 
             }
             $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
             $data['bstatus']['desc'] = '获取成功！';
-            $data['data'] = $res;
+            $data['data'] = $result;
         }else{
             $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
             $data['bstatus']['desc'] = '获取失败！';
