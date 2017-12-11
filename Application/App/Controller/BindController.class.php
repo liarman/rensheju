@@ -1,6 +1,5 @@
 <?php
 namespace App\Controller;
-use Common\Controller\WapController;
 /**
  * 认证控制器
  */
