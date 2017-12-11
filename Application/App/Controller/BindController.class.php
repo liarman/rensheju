@@ -1,5 +1,6 @@
 <?php
 namespace App\Controller;
+use Common\Controller\AppBaseController;
 /**
  * 认证控制器
  */
