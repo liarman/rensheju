@@ -51,7 +51,6 @@ class WapController extends BaseController{
 
 			if (isset($_GET['code']) && isset($_GET['state']) && ($_GET['state']=='oauth')){
 				$rt=$this->curlGet('https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$this->_appid.'&secret='.$this->_secret.'&code='.$_GET['code'].'&grant_type=authorization_code');
-				
 				$jsonrt=json_decode($rt,1);
 				$openid= isset( $jsonrt['openid'] ) ? $jsonrt['openid'] : "";
 				$access_token = isset( $jsonrt['access_token'] ) ? $jsonrt['access_token'] : "" ;
@@ -109,7 +108,7 @@ class WapController extends BaseController{
 			
 			$this->wecha_id=$_SESSION[$session_openid_name];
 		}
-		//print_r($this->wecha_id);die;
+		
 		if($this->wecha_id&&!preg_match("/^[0-9a-zA-Z_\-\s]{3,82}$/",$this->wecha_id)){
 			exit('error openid:'.$this->wecha_id);
 		}
