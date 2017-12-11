@@ -299,9 +299,23 @@ class RuleController extends AdminBaseController{
         $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
         $rows = isset($_POST['rows']) ? intval($_POST['rows']) : 10;
         $offset = ($page-1)*$rows;
-        $result["total"]=D('users')->count();
+        //session获取管理员的townid
+        $townid=$_SESSION['user']['townid'];
+        if($townid){
+            $countsql="select count(b.id) AS total from qfant_users b,qfant_town d where 1=1 AND b.townid=d.id  and d.id='$townid'";
+            $sql="select b.*,d.name as tname from qfant_users b,qfant_town d where 1=1 AND b.townid=d.id and d.id='$townid' ";
+        }else{
+            $countsql="select count(b.id) AS total from qfant_users b ";
+            $sql="select b.*,d.name as tname from qfant_users b left join qfant_town d on  b.townid=d.id";
+        }
+        $param=array();
+        $sql.=" limit %d,%d";
+        array_push($param,$offset);
+        array_push($param,$rows);
+        $data=D('users')->query($countsql,$param);
+        $result['total']=$data[0]['total'];
+        $data=D('users')->query($sql,$param);
 
-        $data=D('users')->limit($offset.','.$rows)->select();
         foreach ($data as $key => $value) {//三级权限
             $ag=D('AuthGroup')->query("select g.title from qfant_auth_group g,qfant_auth_group_access ga where g.id=ga.group_id and ga.uid=".$value['id']);
             if($ag){

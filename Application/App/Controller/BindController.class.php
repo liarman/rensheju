@@ -1,10 +1,9 @@
 <?php
 namespace App\Controller;
-use Common\Controller\WapController;
 /**
  * 认证控制器
  */
-class BindController extends WapController{
+class BindController extends AppBaseController{
     public function _initialize() {
 		
 		parent::_initialize();

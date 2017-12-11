@@ -79,6 +79,14 @@ function  attrValue(val,rowData,row){
     return val;
 }
 
+function  attrStatus(val,rowData,row){
+    if(val==0){
+        val="不可用";
+    }else if(val==1){
+        val="可用";
+    }
+    return val;
+}
 function formatAction(value,row,index){
     id=row.id;
     var del = '<a href="javascript:void(0);" onclick="destroy('+id+')">删除</a>';
