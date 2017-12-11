@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="__EASYUI__/jquery.min.js"></script>
+    <script src="__EASYUI__/jquery.easyui.min.js"></script>
+    <script src="__EASYUI__/locale/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" href="__EASYUI__/super/css/font-awesome.min.css">
+    <link rel="stylesheet" href="__EASYUI__/super/superRed.css" id="themeCss">
+    <script src="__EASYUI__/super/super.js"></script>
+    <script src="__ADMIN_JS__/index.js" type="text/javascript" charset="utf-8"></script>
+    <link href="__PUBLIC__/statics/css/admin.css" rel="stylesheet" />
+    <script src="__EASYUI__/common.js"></script>
+    <script src="__EASYUI__/formatter.js"></script>
+    <script src="__EASYUI__/extend/validate.js"></script>
+    <script src="__KINDEDITOR__/kindeditor-all.js"></script>
+    <script src="__KINDEDITOR__/lang/zh-CN.js"></script>
+    <script type="text/javascript">
+        var addPersonUrl="{:U('Admin/Person/addPerson')}";
+        var editPersonUrl="{:U('Admin/Person/editPerson')}";
+        var deletePersonUrl="{:U('Admin/Person/deletePerson')}";
+        var imgUrl="{:C('GLOBAL_PIC_URL')}";
+    </script>
+</head>
+<body>
+<div id='Loading' style="position:absolute;z-index:1000;top:0px;left:0px;width:100%;height:100%;background:#fff ;text-align:center;padding-top: 10%;">
+    <h1><image src="/rensheju/tpl/Public/images/loading3.gif"/></h1>
+</div>
+<script src="__ADMIN_JS__/Person.js" type="text/javascript" charset="utf-8"></script>
+<table id="PersonGrid" class="easyui-datagrid" style="width:92%;height:670px" url="{:U('Admin/Person/ajaxPersonList')}" pagination="true" toolbar="#toolbar_Person" singleSelect="true" rownumbers="true" pageSize="20">
+    <thead>
+    <tr>
+        <th field="name" width="85" >姓名</th>
+        <th field="age" width="85" >年龄</th>
+        <th field="phone" width="200" >手机号</th>
+        <th field="address" width="230" >家庭住址</th>
+        <th field="iden" width="150">身份证号</th>
+        <th field="bank" width="150" >开户行</th>
+        <th field="banknum" width="270" >卡号</th>
+        <th field="headimg" width="190" formatter="imgFormatter">头像</th>
+        <th field="villagename" width="270" >所属乡镇</th>
+
+    </tr>
+    </thead>
+</table>
+
+<div id="toolbar_Person">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="fa fa-plus" plain="true" onclick="addPerson()">添加</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="fa fa-edit" plain="true" onclick="editPerson()">编辑</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="fa fa-remove" plain="true" onclick="destroyPerson()">删除</a>
+
+
+</div>
+<!-- 添加 -->
+<div id="addPerson" class="easyui-dialog" title="添加" style="width:450px;height:500px;padding:10px 20px;" closed="true" modal="true">
+    <form id="addPersonForm" method="post">
+        <table>
+            <tr>
+                <td>姓名:</td>
+                <td><input name="name" class="easyui-textbox" data-options="delay:1000,required:true,height:30" /></td>
+            </tr>
+            <tr>
+                <td>年龄:</td>
+                <td><input name="age" class="easyui-textbox" data-options="delay:1000,required:true,height:30" /></td>
+            </tr>
+            <tr>
+                <td>手机号:</td>
+                <td><input name="phone" class="easyui-textbox" data-options="delay:1000,required:true,validType:'checkFloat',height:30" />
+                </td>
+            </tr>
+            <tr>
+                <td>家庭住址:</td>
+                <td><input name="address" class="easyui-textbox" data-options="delay:1000,required:true,validType:'checkFloat',height:30" />
+            </tr>
+            <tr>
+                <td>身份证号:</td>
+                <td><input name="iden" class="easyui-textbox" data-options="delay:1000,required:true,validType:'checkFloat',height:30" />
+                </td>
+            </tr>
+            <tr>
+                <td>开户行:</td>
+                <td><input name="bank" class="easyui-textbox" data-options="delay:1000,required:true,validType:'checkFloat',height:30" />
+                </td>
+            </tr>
+            <tr>
+                <td>卡号:</td>
+                <td><input name="banknum" class="easyui-textbox" data-options="delay:1000,required:true,validType:'checkFloat',height:30" />
+                </td>
+            </tr>
+            <tr>
+                <td>头像:</td>
+                <td><input name="headimg" class="easyui-textbox addimg" data-options="delay:1000,required:true,height:30"  />
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" id="addheadimg" style="width:90px">上传</a>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td></td>
+                <td><a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="addPersonSubmit()" style="width:90px">保存</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#addPerson').dialog('close')" style="width:90px">取消</a></td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+<div id="editPerson" class="easyui-dialog" title="编辑" style="width:450px;height:500px;padding:10px 20px;" closed="true" modal="true">
+    <form id="editPersonForm" method="post">
+        <input type="hidden" name="id" value="">
+        <table>
+            <tr>
+                <td>姓名:</td>
+                <td><input name="name" class="easyui-textbox" data-options="delay:1000,required:true,height:30" /></td>
+            </tr>
+            <tr>
+                <td>年龄:</td>
+                <td><input name="age" class="easyui-textbox" data-options="delay:1000,required:true,height:30" /></td>
+            </tr>
+            <tr>
+                <td>手机号:</td>
+                <td><input name="phone" class="easyui-textbox" data-options="delay:1000,required:true,validType:'checkFloat',height:30" />
+                </td>
+            </tr>
+            <tr>
+                <td>家庭住址:</td>
+                <td><input name="address" class="easyui-textbox" data-options="delay:1000,required:true,validType:'checkFloat',height:30" />
+            </tr>
+            <tr>
+                <td>身份证号:</td>
+                <td><input name="iden" class="easyui-textbox" data-options="delay:1000,required:true,validType:'checkFloat',height:30" />
+                </td>
+            </tr>
+            <tr>
+                <td>开户行:</td>
+                <td><input name="bank" class="easyui-textbox" data-options="delay:1000,required:true,validType:'checkFloat',height:30" />
+                </td>
+            </tr>
+            <tr>
+                <td>卡号:</td>
+                <td><input name="banknum" class="easyui-textbox" data-options="delay:1000,required:true,validType:'checkFloat',height:30" />
+                </td>
+            </tr>
+            <tr>
+                <td>头像:</td>
+                <td><input name="headimg" class="easyui-textbox editimg" data-options="delay:1000,required:true,height:30"  />
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" id="editheadimg" style="width:90px">上传</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="editPersonSubmit()" style="width:90px">保存</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#editPerson').dialog('close')" style="width:90px">取消</a></td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+</body>
+</html>

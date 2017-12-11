@@ -124,6 +124,9 @@ class CustomerController extends AppBaseController
         $param = json_decode($b);
         $islogin = $this->checkIsLonginUser($param['cparam']['userId'],$param['cparam']['token']);
         if($islogin){
+            $villageid = I("post.villageid");
+            $pageSize = I("post.pageSize");
+            $pageNo = I("post.pageNo");
             $towns = D("Town")->select();
             foreach($towns as $key =>$val){
                 $res['townResult'][$key]['id'] = $val['id'];
@@ -132,10 +135,7 @@ class CustomerController extends AppBaseController
                 foreach ($village as $k => $v){
                     $res['townResult'][$key]['village'][$k]['id'] = $v['id'];
                     $res['townResult'][$key]['village'][$k]['name'] = $v['name'];
-                    $townid = $val['id'];
-                    $villageid = $v['id'];
-                    $person = D('Person')->where(array('townid'=>$townid,'villageid'=>$villageid))->select();
-                    //print_r($person = D('Person')->where(array('townid'=>$townid,'villageid'=>$villageid))->select());
+                    $person = D('Person')->where(array('villageid'=>$villageid))->select();
                     foreach ($person as $ki => $vi){
                         $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['id'] = $vi['id'];
                         $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['name'] = $vi['name'];
