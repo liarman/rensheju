@@ -152,11 +152,11 @@ class CustomerController extends AppBaseController
                     $res['personsResult']['bank'] = $person[$k]['bank'];
                     $res['personsResult']['banknum'] = $person[$k]['banknum'];
                     $res['personsResult']['headimg'] = $person[$k]['headimg'];
-                    $result['personsResult'][] = $res['personsResult'];
+                    $result[] = $res['personsResult'];
                 }
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
                 $data['bstatus']['des'] = '获取成功！';
-                $data['data'] = $result;
+                $data['data']['personsResult'] = $result;
 
             }else {
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
