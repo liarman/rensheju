@@ -77,7 +77,7 @@ class InterfaceController extends AppBaseController{
                     $pageNo =$param['pageNo'];
                     $pageSize =$param['pageSize'];
                     $offset = ($pageNo - 1) * $pageSize;
-                    $sql = "select * from qfant_workers n  where 1=1 and villageId='$villageId'";
+                    $sql = "select * from qfant_worker n  where 1=1 and villageId='$villageId'";
                     $param = array();
                     $sql .= " limit %d,%d";
                     array_push($param, $offset);
