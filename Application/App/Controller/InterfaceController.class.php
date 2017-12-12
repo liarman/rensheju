@@ -44,7 +44,7 @@ class InterfaceController extends AppBaseController{
             $b = I("post.b");
             if($key && $b){
                 $b = $this->caesar->clientDecode($key, $b);
-                $param=json_desode($b,true);
+                $param=json_decode($b,true);
 
                 $login =  $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
@@ -84,7 +84,7 @@ class InterfaceController extends AppBaseController{
             $b = I("post.b");
             if($key && $b ){
                 $b = $this->caesar->clientDecode($key, $b);
-                $param=json_desode($b,true);
+                $param=json_decode($b,true);
 
                 $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
@@ -123,7 +123,7 @@ class InterfaceController extends AppBaseController{
             $b = I("post.b");
             if($key && $b){
                 $b = $this->caesar->clientDecode($key, $b);
-                $param=json_desode($b,true);
+                $param=json_decode($b,true);
 
                 $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
@@ -135,7 +135,7 @@ class InterfaceController extends AppBaseController{
                     $param['type']='rtmp';
                     if($param['deviceid'] && $param['shareid'] && $param['uk']){
                         $video=http("https://api.iermu.com/v2/pcs/device",$param);
-                        $video=json_desode($video,true);
+                        $video=json_decode($video,true);
                         $result['name']=$equipment['name'];
                         $result['rtmp']=$video['url'];
                         $result['status']=$video['status'];
