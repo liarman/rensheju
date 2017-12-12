@@ -106,18 +106,18 @@ class CustomerController extends AppBaseController
             if ($islogin) {
                 $towns = D("Town")->select();
                 foreach ($towns as $key => $val) {
-                    $res['townResult'][$key]['id'] = $val['id'];
-                    $res['townResult'][$key]['name'] = $val['name'];
+                    $towns[$key]['id'] = $val['id'];
+                    $towns[$key]['name'] = $val['name'];
                     $village = D('Village')->where(array('townid' => $val['id']))->select();
                     foreach ($village as $k => $v) {
-                        $res['townResult'][$key]['village'][$k]['id'] = $v['id'];
-                        $res['townResult'][$key]['village'][$k]['name'] = $v['name'];
+                        $towns[$key]['village'][$k]['id'] = $v['id'];
+                        $towns[$key]['village'][$k]['name'] = $v['name'];
                     }
 
                 }
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
                 $data['bstatus']['des'] = '获取成功！';
-                $data['data'] = $res;
+                $data['data']['towns'] = $towns;
             } else {
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
                 $data['bstatus']['des'] = '获取失败！';
