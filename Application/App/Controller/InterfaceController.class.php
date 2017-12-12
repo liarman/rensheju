@@ -168,7 +168,7 @@ class InterfaceController extends AppBaseController{
                         $result['name']=$equipment['name'];
                         $result['rtmp']=$video['url'];
                         $result['status']=$video['status'];
-                        if($equipment['status']==0){
+                        if($video['status']==0){
                             $data['bstatus']['code']=-2;
                             $data['bstatus']['des']='设备已离线或取消分享';
                         }else {
