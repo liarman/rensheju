@@ -104,16 +104,13 @@ class CustomerController extends AppBaseController
             $param = json_decode($b,true);
             $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
             if ($islogin) {
-                $towns = D("Town")->select();
+                $towns = D("Town")->field("id,name")->select();
                 foreach ($towns as $key => $val) {
-                    $towns[$key]['id'] = $val['id'];
-                    $towns[$key]['name'] = $val['name'];
                     $village = D('Village')->where(array('townid' => $val['id']))->select();
                     foreach ($village as $k => $v) {
                         $towns[$key]['village'][$k]['id'] = $v['id'];
                         $towns[$key]['village'][$k]['name'] = $v['name'];
                     }
-
                 }
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
                 $data['bstatus']['des'] = '获取成功！';
