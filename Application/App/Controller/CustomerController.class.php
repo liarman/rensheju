@@ -31,7 +31,7 @@ class CustomerController extends AppBaseController
             $data['data'] = '';
         }else{
             $b = $this->caesar->clientDecode($key, $b);
-            $param = json_decode($b);
+            $param = json_decode($b,true);
             $phone = $param['phone'];
             $pass = $param['password'];
             $token = uniqid();
@@ -79,7 +79,7 @@ class CustomerController extends AppBaseController
             $data['data'] = '';
         }else {
             $b = $this->caesar->clientDecode($key, $b);
-            $param = json_decode($b);
+            $param = json_decode($b,true);
             D("LoginLogger")->where(array('customer_Id' => $param['cparam']['userId']))->delete();
             $data['bstatus']['code'] = 0;
             $data['bstatus']['des'] = '退出成功！';
@@ -101,7 +101,7 @@ class CustomerController extends AppBaseController
             $data['data'] = '';
         }else {
             $b = $this->caesar->clientDecode($key, $b);
-            $param = json_decode($b);
+            $param = json_decode($b,true);
             $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
             if ($islogin) {
                 $towns = D("Town")->select();
@@ -137,7 +137,7 @@ class CustomerController extends AppBaseController
             $data['data'] = '';
         }else {
             $b = $this->caesar->clientDecode($key, $b);
-            $param = json_decode($b);
+            $param = json_decode($b,true);
             $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
             if ($islogin) {
                 $villageid = I("post.villageid");
