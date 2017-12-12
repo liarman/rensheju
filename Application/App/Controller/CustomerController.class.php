@@ -124,7 +124,6 @@ class CustomerController extends AppBaseController
                 $data['data'] = '';
             }
         }
-        print_r($data);die;
         echo $this->caesar->clientEncode($key, json_encode($data));
     }
     /**
