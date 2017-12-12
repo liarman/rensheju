@@ -143,20 +143,24 @@ class CustomerController extends AppBaseController
                 $villageid = I("post.villageid");
                 $pageSize = I("post.pageSize");
                 $pageNo = I("post.pageNo");
-                $person = D('Person')->where(array('villageid' => $villageid))->limit($pageSize)->page($pageNo)->select();
-                $res['personsResult']['id'] = $person['id'];
-                $res['personsResult']['name'] = $person['name'];
-                $res['personsResult']['age'] = $person['age'];
-                $res['personsResult']['phone'] = $person['phone'];
-                $res['personsResult']['address'] = $person['address'];
-                $res['personsResult']['iden'] = $person['iden'];
-                $res['personsResult']['bank'] = $person['bank'];
-                $res['personsResult']['banknum'] = $person['banknum'];
-                $res['personsResult']['headimg'] = $person['headimg'];
+                $person = D('Person')->where(array('villageid' => 9))->select();
+                foreach ($person as $k => $v){
 
+                    $res['personsResult']['id'] = $person[$k]['id'];
+                    $res['personsResult']['name'] = $person[$k]['name'];
+                    $res['personsResult']['age'] = $person[$k]['age'];
+                    $res['personsResult']['phone'] = $person[$k]['phone'];
+                    $res['personsResult']['address'] = $person[$k]['address'];
+                    $res['personsResult']['iden'] = $person[$k]['iden'];
+                    $res['personsResult']['bank'] = $person[$k]['bank'];
+                    $res['personsResult']['banknum'] = $person[$k]['banknum'];
+                    $res['personsResult']['headimg'] = $person[$k]['headimg'];
+                    $result['personsResult'][] = $res['personsResult'];
+                }
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
                 $data['bstatus']['des'] = '获取成功！';
-                $data['data'] = $res;
+                $data['data'] = $result;
+
             }else {
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
                 $data['bstatus']['des'] = '获取失败！';
@@ -166,6 +170,7 @@ class CustomerController extends AppBaseController
             }
 
         echo $this->caesar->clientEncode($key, json_encode($data));
+
     }
 
 
