@@ -186,7 +186,7 @@ class CustomerController extends AppBaseController
                 $villages[$k]['boundary'] = D("VillageBoundary")->where(array('villageid' => $val['id']))->select();
             }
             $data['bstatus']['code'] = 0;
-            $data['bstatus']['message'] = '获取成功';
+            $data['bstatus']['des'] = '获取成功';
             $data['data'] = $villages;
             echo $this->caesar->clientEncode($key, json_encode($data));
         }
@@ -204,10 +204,10 @@ class CustomerController extends AppBaseController
             $result = D("VillageConsult")->add($consult);
             if ($result) {
                 $data['bstatus']['code'] = 0;
-                $data['bstatus']['message'] = '添加成功';
+                $data['bstatus']['des'] = '添加成功';
             } else {
                 $data['bstatus']['code'] = -1;
-                $data['bstatus']['message'] = '添加失败';
+                $data['bstatus']['des'] = '添加失败';
             }
             echo $this->caesar->clientEncode($key, json_encode($data));
         }
@@ -223,7 +223,7 @@ class CustomerController extends AppBaseController
             $w = $this->http("https://api.seniverse.com/v3/weather/now.json?key=fguvd3ahk6eneabr&location=Bozhou&language=zh-Hans&unit=c");
             $w = json_decode($w);
             $data['bstatus']['code'] = 0;
-            $data['bstatus']['message'] = '获取成功';
+            $data['bstatus']['des'] = '获取成功';
             $data['data'] = $w->results;
             //print_r( json_encode($data));die;
             echo $this->caesar->clientEncode($key, json_encode($data));
