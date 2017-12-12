@@ -129,28 +129,15 @@ class CustomerController extends AppBaseController
             $param = json_decode($b,true);
             $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
             if ($islogin) {
-                $villageid = I("post.villageId");
-                $pageSize = I("post.pageSize");
-                $pageNo = I("post.pageNo");
+                $villageid = $param['villageId'];
+                $pageSize =  $param['pageSize'];
+                $pageNo =  $param['pageNo'];
                 $offset = ($pageNo - 1) * $pageSize;
                 $data['data']['totalNum']=D('Person')->where(array('villageid' => $villageid ))->count();
                 $person = D('Person')->where(array('villageid' => $villageid ))->limit($offset,$pageSize)->page($pageNo)->select();
-                foreach ($person as $k => $v){
-
-                    $res['personsResult']['id'] = $person[$k]['id'];
-                    $res['personsResult']['name'] = $person[$k]['name'];
-                    $res['personsResult']['age'] = $person[$k]['age'];
-                    $res['personsResult']['phone'] = $person[$k]['phone'];
-                    $res['personsResult']['address'] = $person[$k]['address'];
-                    $res['personsResult']['iden'] = $person[$k]['iden'];
-                    $res['personsResult']['bank'] = $person[$k]['bank'];
-                    $res['personsResult']['banknum'] = $person[$k]['banknum'];
-                    $res['personsResult']['headimg'] = $person[$k]['headimg'];
-                    $result[] = $res['personsResult'];
-                }
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
                 $data['bstatus']['des'] = '获取成功！';
-                $data['data']['personsResult'] = $result;
+                $data['data']['personsResult'] = $person;
 
             }else {
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
