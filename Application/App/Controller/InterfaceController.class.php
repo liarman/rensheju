@@ -71,7 +71,7 @@ class InterfaceController extends AppBaseController{
                  $b = $this->caesar->clientDecode($key, $b);
                  $param=json_decode($b,true);
 
-                $login =  checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
+                $login =  $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
                     $villageId =$param['villageId'];
                     $pageNo =$param['pageNo'];
@@ -113,7 +113,7 @@ class InterfaceController extends AppBaseController{
                  $b = $this->caesar->clientDecode($key, $b);
                  $param=json_decode($b,true);
 
-                $login =  checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
+                $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
                     $pageNo = $param['pageNo'];
                     $pageSize = $param['pageSize'];
@@ -154,7 +154,7 @@ class InterfaceController extends AppBaseController{
                  $b = $this->caesar->clientDecode($key, $b);
                  $param=json_decode($b,true);
 
-                $login =  checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
+                $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
                     $equipment=D("Equipment")->where(array('id'=> $param['id']))->find();
                     $param['method']='liveplay';
