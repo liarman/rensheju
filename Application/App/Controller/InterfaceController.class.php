@@ -127,7 +127,7 @@ class InterfaceController extends AppBaseController{
 
                     $data['bstatus']['code'] = 0;
                     $data['bstatus']['message'] = '获取成功';
-                    $data['camerasResult'] = $cameras;
+                    $data['data'] = $cameras;
                }else{
                     $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
                     $data['bstatus']['message'] = '登录失效，请重新登录';
