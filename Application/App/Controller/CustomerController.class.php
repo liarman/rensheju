@@ -44,21 +44,21 @@ class CustomerController extends AppBaseController
                 if ($login) {
                     D("LoginLogger")->where(array('customer_Id' => $user['id']))->save($res);
                     $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
-                    $data['bstatus']['desc'] = '登录成功';
+                    $data['bstatus']['des'] = '登录成功';
                     $data['data']['token'] = $token;
                     $data['data']['userId'] = $user['id'];
                     $data['data']['phone'] = $user['phone'];
                 }else{
                     D("LoginLogger")->add($res);
                     $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
-                    $data['bstatus']['desc'] = '登录成功';
+                    $data['bstatus']['des'] = '登录成功';
                     $data['data']['token'] = $token;
                     $data['data']['userId'] = $user['id'];
                     $data['data']['phone'] = $user['phone'];
                 }
             }else {
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
-                $data['bstatus']['desc'] = '登录失败';
+                $data['bstatus']['des'] = '登录失败';
                 $data['data'] = '';
             }
         }
@@ -82,7 +82,7 @@ class CustomerController extends AppBaseController
             $param = json_decode($b);
             D("LoginLogger")->where(array('customer_Id' => $param['cparam']['userId']))->delete();
             $data['bstatus']['code'] = 0;
-            $data['bstatus']['desc'] = '退出成功！';
+            $data['bstatus']['des'] = '退出成功！';
             $data['data'] = '';
         }
             echo $this->caesar->clientEncode($key, json_encode($data));
@@ -116,11 +116,11 @@ class CustomerController extends AppBaseController
 
                 }
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
-                $data['bstatus']['desc'] = '获取成功！';
+                $data['bstatus']['des'] = '获取成功！';
                 $data['data'] = $res;
             } else {
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-                $data['bstatus']['desc'] = '获取失败！';
+                $data['bstatus']['des'] = '获取失败！';
                 $data['data'] = '';
             }
         }
@@ -143,40 +143,28 @@ class CustomerController extends AppBaseController
                 $villageid = I("post.villageid");
                 $pageSize = I("post.pageSize");
                 $pageNo = I("post.pageNo");
-                $towns = D("Town")->select();
-                foreach ($towns as $key => $val) {
-                    $res['townResult'][$key]['id'] = $val['id'];
-                    $res['townResult'][$key]['name'] = $val['name'];
-                    $village = D('Village')->where(array('townid' => $val['id']))->select();
-                    foreach ($village as $k => $v) {
-                        $res['townResult'][$key]['village'][$k]['id'] = $v['id'];
-                        $res['townResult'][$key]['village'][$k]['name'] = $v['name'];
-                        $person = D('Person')->where(array('villageid' => $villageid))->select();
-                        foreach ($person as $ki => $vi) {
-                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['id'] = $vi['id'];
-                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['name'] = $vi['name'];
-                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['age'] = $vi['age'];
-                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['phone'] = $vi['phone'];
-                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['address'] = $vi['address'];
-                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['iden'] = $vi['iden'];
-                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['bank'] = $vi['bank'];
-                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['banknum'] = $vi['banknum'];
-                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['headimg'] = $vi['headimg'];
-                            $result['personsResult'] = $res['townResult'][$key]['village'][$k]['personsResult'][$ki];
+                $person = D('Person')->where(array('villageid' => $villageid))->limit($pageSize)->page($pageNo)->select();
+                $res['personsResult']['id'] = $person['id'];
+                $res['personsResult']['name'] = $person['name'];
+                $res['personsResult']['age'] = $person['age'];
+                $res['personsResult']['phone'] = $person['phone'];
+                $res['personsResult']['address'] = $person['address'];
+                $res['personsResult']['iden'] = $person['iden'];
+                $res['personsResult']['bank'] = $person['bank'];
+                $res['personsResult']['banknum'] = $person['banknum'];
+                $res['personsResult']['headimg'] = $person['headimg'];
 
-                        }
-                    }
-
-                }
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
-                $data['bstatus']['desc'] = '获取成功！';
-                $data['data'] = $result;
-            } else {
+                $data['bstatus']['des'] = '获取成功！';
+                $data['data'] = $res;
+            }else {
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-                $data['bstatus']['desc'] = '获取失败！';
+                $data['bstatus']['des'] = '获取失败！';
                 $data['data'] = '';
             }
-        }
+
+            }
+
         echo $this->caesar->clientEncode($key, json_encode($data));
     }
 
