@@ -143,7 +143,7 @@ class CustomerController extends AppBaseController
                 $villageid = I("post.villageid");
                 $pageSize = I("post.pageSize");
                 $pageNo = I("post.pageNo");
-                $person = D('Person')->where(array('villageid' => 9))->select();
+                $person = D('Person')->where(array('villageid' => $villageid ))->limit($pageSize)->page($pageNo)->select();
                 foreach ($person as $k => $v){
 
                     $res['personsResult']['id'] = $person[$k]['id'];
