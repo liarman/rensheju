@@ -129,7 +129,7 @@ class CustomerController extends AppBaseController
             $param = json_decode($b,true);
             $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
             if ($islogin) {
-                $villageid = I("post.villageid");
+                $villageid = I("post.villageId");
                 $pageSize = I("post.pageSize");
                 $pageNo = I("post.pageNo");
                 $person = D('Person')->where(array('villageid' => $villageid ))->limit($pageSize)->page($pageNo)->select();
