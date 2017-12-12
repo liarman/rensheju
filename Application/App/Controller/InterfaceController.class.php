@@ -165,6 +165,7 @@ class InterfaceController extends AppBaseController{
                     if($param['deviceid'] && $param['shareid'] && $param['uk']){
                         $data=http("https://api.iermu.com/v2/pcs/device",$param);
                         $data=json_decode($data,true);
+                        $result['name']=$equipment['name'];
                         $result['rtmp']=$data['url'];
                         $result['status']=$data['status'];
                         if($equipment['status']==0){
