@@ -6,6 +6,15 @@ use Common\Controller\AppBaseController;
  * 认证控制器
  */
 class InterfaceController extends AppBaseController{
+
+    private $caesar;
+
+    public function _initialize()
+    {
+        parent::_initialize();
+        Vendor('Caesar.Caesar');
+        $this->caesar = new \Caesar();
+    }
     /**传参  pageNo  pageSize
      * 获取通知列表接口
      */
