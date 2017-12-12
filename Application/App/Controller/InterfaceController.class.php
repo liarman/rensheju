@@ -131,7 +131,7 @@ class InterfaceController extends AppBaseController{
                        }else {
                         $data['bstatus']['code']=0;
                         $data['bstatus']['des']='获取成功';
-                        $data['data']=$equipment;
+                        $data['cameraResult']=$equipment;
                     }
                 }else {
                     $data['bstatus']['code']=-1;
