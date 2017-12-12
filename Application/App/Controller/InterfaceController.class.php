@@ -18,20 +18,36 @@ class InterfaceController extends AppBaseController{
     /**传参  pageNo  pageSize
      * 获取通知列表接口
      */
-    public function getNotices(){
-        if(IS_POST){
+    public function getNotices()
+    {
+        if (IS_POST) {
             $key = I("post.key");
             $b = I("post.b");
-            if($key && $b){
-                $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-                $data['bstatus']['des'] = '获取失败！';
-                $data['noticesResult'] = '';
-            }else {
+            if ($key && $b) {
+                $b = $this->caesar->clientDecode($key, $b);
+                $param = json_decode($b, true);
+
+                $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
+                if ($login) {
+                    $pageNo = $param['pageNo'];
+                    $pageSize = $param['pageSize'];
+                    $offset = ($pageNo - 1) * $pageSize;
+                    $sql = "select * from qfant_notice n  where 1=1";
+                    $param = array();
+                    $sql .= " limit %d,%d";
+                    array_push($param, $offset);
+                    array_push($param, $pageSize);
+                    $notice = D('Notice')->query($sql, $param);
+
+                    $data['bstatus']['code'] = 0;
+                    $data['bstatus']['des'] = '获取成功';
+                    $data['data']['noticesResult'] = $notice;
+
+                    echo $this->caesar->clientEncode($key, json_encode($data));
+                }
 
             }
-            echo $this->caesar->clientEncode($key, json_encode($data));
         }
-
     }
 
     /**
