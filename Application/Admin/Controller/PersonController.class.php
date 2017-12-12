@@ -55,10 +55,10 @@ class PersonController extends AdminBaseController
 
             if ($result) {
                  $message['status'] = 1;
-                 $message['message'] = '添加菜单成功';
+                 $message['message'] = '添加成功';
             } else {
                 $message['status'] = 0;
-                $message['message'] = '添加菜单失败';
+                $message['message'] = '添加失败';
             }
             $this->ajaxReturn($message, 'JSON');
             }
@@ -69,38 +69,30 @@ class PersonController extends AdminBaseController
      */
     public function edit()
     {
-        $data = I('post.');
-        $map = array(
-            'id' => $data['id']
-        );
-        $id = I('post.id');
-        $kind = I('post.kind');
-        $dataKind = D('Person')->field('kind')->where(array('id' => $id))->select();
-        if ($kind != $dataKind[0]) {
-            if ($kind == 1 || $kind == 2) {
-                $data['title'] = "";
-                $data['description'] = "";
-                $data['linkurl'] = "";
-                $data['upload'] = "";
-            } else if ($kind == 3) {
-                $data['kindcontent'] = "";
-            } else {
-                $data['title'] = "";
-                $data['description'] = "";
-                $data['linkurl'] = "";
-                $data['upload'] = "";
-                $data['kindcontent'] = "";
+        if(IS_POST){
+            $data['id']=I('post.id');
+            $data["name"] = I("post.name");
+            $data["age"] = I("post.age");
+            $data["phone"] = I("post.phone");
+            $data["address"] = I("post.address");
+            $data["iden"] = I("post.iden");
+            $data["bank"] = I("post.bank");
+            $data["banknum"] = I("post.banknum");
+            $data["headimg"] = I("post.headimg");
+            $where['id']=$data['id'];
+            $result=D('Person')->editData($where,$data);
+            if($result){
+                $message['status']=1;
+                $message['message']='保存成功';
+            }else {
+                $message['status']=0;
+                $message['message']='保存失败';
             }
+        }else {
+            $message['status']=0;
+            $message['message']='保存失败';
         }
-        $result = D('Person')->editData($map, $data);
-        if ($result) {
-            $message['status'] = 1;
-            $message['message'] = '修改成功';
-        } else {
-            $message['status'] = 0;
-            $message['message'] = '修改失败';
-        }
-        $this->ajaxReturn($message, 'JSON');
+        $this->ajaxReturn($message,'JSON');
     }
 
     /**
@@ -115,10 +107,10 @@ class PersonController extends AdminBaseController
         $result = D('Person')->deleteData($map);
         if ($result) {
             $message['status'] = 1;
-            $message['message'] = '删除菜单成功';
+            $message['message'] = '删除成功';
         } else {
             $message['status'] = 0;
-            $message['message'] = '删除菜单失败';
+            $message['message'] = '删除失败';
         }
         $this->ajaxReturn($message, 'JSON');
     }

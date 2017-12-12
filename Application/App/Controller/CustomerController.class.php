@@ -26,38 +26,42 @@ class CustomerController extends AppBaseController
         //if(IS_POST){
         $key = I("post.key");
         $b = I("post.b");
-        $b = $this->caesar->clientDecode($key, $b);
-        $param = json_decode($b);
-        $phone = $param['phone'];
-        $pass = $param['password'];
-        $token = uniqid();
-        $user = D("Customer")->where(array('phone' => $phone, 'password' => md5($pass)))->find();
-        $res['customer_Id'] = $user['id'];
-        $res['loginIden'] = $token;
-        $res['loginTime'] = date("Y-m-d H:i:s", time());
-        if ($user) {
-            $login = D("LoginLogger")->where(array('customer_Id' => $user['id']))->find();
-            if ($login) {
-                D("LoginLogger")->where(array('customer_Id' => $user['id']))->save($res);
-                $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
-                $data['bstatus']['desc'] = '登录成功';
-                $data['data']['token'] = $token;
-                $data['data']['userId'] = $user['id'];
-                $data['data']['phone'] = $user['phone'];
-            }else{
-                D("LoginLogger")->add($res);
-                $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
-                $data['bstatus']['desc'] = '登录成功';
-                $data['data']['token'] = $token;
-                $data['data']['userId'] = $user['id'];
-                $data['data']['phone'] = $user['phone'];
+        if(empty($key)||empty($b)){
+            $data['bstatus']['code'] = '变量获取失败';
+            $data['data'] = '';
+        }else{
+            $b = $this->caesar->clientDecode($key, $b);
+            $param = json_decode($b);
+            $phone = $param['phone'];
+            $pass = $param['password'];
+            $token = uniqid();
+            $user = D("Customer")->where(array('phone' => $phone, 'password' => md5($pass)))->find();
+            $res['customer_Id'] = $user['id'];
+            $res['loginIden'] = $token;
+            $res['loginTime'] = date("Y-m-d H:i:s", time());
+            if ($user) {
+                $login = D("LoginLogger")->where(array('customer_Id' => $user['id']))->find();
+                if ($login) {
+                    D("LoginLogger")->where(array('customer_Id' => $user['id']))->save($res);
+                    $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
+                    $data['bstatus']['desc'] = '登录成功';
+                    $data['data']['token'] = $token;
+                    $data['data']['userId'] = $user['id'];
+                    $data['data']['phone'] = $user['phone'];
+                }else{
+                    D("LoginLogger")->add($res);
+                    $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
+                    $data['bstatus']['desc'] = '登录成功';
+                    $data['data']['token'] = $token;
+                    $data['data']['userId'] = $user['id'];
+                    $data['data']['phone'] = $user['phone'];
                 }
-        }else {
+            }else {
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
                 $data['bstatus']['desc'] = '登录失败';
                 $data['data'] = '';
+            }
         }
-
             echo $this->caesar->clientEncode($key, json_encode($data));
             //}
     }
@@ -70,13 +74,17 @@ class CustomerController extends AppBaseController
         //if(IS_POST){
             $key = I("post.key");
             $b = I("post.b");
+        if(empty($key)||empty($b)){
+            $data['bstatus']['code'] = '变量获取失败';
+            $data['data'] = '';
+        }else {
             $b = $this->caesar->clientDecode($key, $b);
             $param = json_decode($b);
             D("LoginLogger")->where(array('customer_Id' => $param['cparam']['userId']))->delete();
             $data['bstatus']['code'] = 0;
             $data['bstatus']['desc'] = '退出成功！';
             $data['data'] = '';
-
+        }
             echo $this->caesar->clientEncode($key, json_encode($data));
         //}
     }
@@ -88,30 +96,35 @@ class CustomerController extends AppBaseController
     {
         $key = I("post.key");
         $b = I("post.b");
-        $b = $this->caesar->clientDecode($key, $b);
-        $param = json_decode($b);
-        $islogin = $this->checkIsLonginUser($param['cparam']['userId'],$param['cparam']['token']);
-        if($islogin){
-            $towns = D("Town")->select();
-            foreach($towns as $key =>$val){
-                $res['townResult'][$key]['id'] = $val['id'];
-                $res['townResult'][$key]['name'] = $val['name'];
-                $village = D('Village')->where(array('townid'=>$val['id']))->select();
-                foreach ($village as $k => $v){
-                    $res['townResult'][$key]['village'][$k]['id'] = $v['id'];
-                    $res['townResult'][$key]['village'][$k]['name'] = $v['name'];
-                }
-
-            }
-            $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
-            $data['bstatus']['desc'] = '获取成功！';
-            $data['data'] = $res;
-        }else{
-            $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-            $data['bstatus']['desc'] = '获取失败！';
+        if(empty($key)||empty($b)){
+            $data['bstatus']['code'] = '变量获取失败';
             $data['data'] = '';
-        }
+        }else {
+            $b = $this->caesar->clientDecode($key, $b);
+            $param = json_decode($b);
+            $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
+            if ($islogin) {
+                $towns = D("Town")->select();
+                foreach ($towns as $key => $val) {
+                    $res['townResult'][$key]['id'] = $val['id'];
+                    $res['townResult'][$key]['name'] = $val['name'];
+                    $village = D('Village')->where(array('townid' => $val['id']))->select();
+                    foreach ($village as $k => $v) {
+                        $res['townResult'][$key]['village'][$k]['id'] = $v['id'];
+                        $res['townResult'][$key]['village'][$k]['name'] = $v['name'];
+                    }
 
+                }
+                $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
+                $data['bstatus']['desc'] = '获取成功！';
+                $data['data'] = $res;
+            } else {
+                $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
+                $data['bstatus']['desc'] = '获取失败！';
+                $data['data'] = '';
+            }
+        }
+        print_r($data);die;
         echo $this->caesar->clientEncode($key, json_encode($data));
     }
     /**
@@ -120,47 +133,51 @@ class CustomerController extends AppBaseController
     public function person(){
         $key = I("post.key");
         $b = I("post.b");
-        $b = $this->caesar->clientDecode($key, $b);
-        $param = json_decode($b);
-        $islogin = $this->checkIsLonginUser($param['cparam']['userId'],$param['cparam']['token']);
-        if($islogin){
-            $villageid = I("post.villageid");
-            $pageSize = I("post.pageSize");
-            $pageNo = I("post.pageNo");
-            $towns = D("Town")->select();
-            foreach($towns as $key =>$val){
-                $res['townResult'][$key]['id'] = $val['id'];
-                $res['townResult'][$key]['name'] = $val['name'];
-                $village = D('Village')->where(array('townid'=>$val['id']))->select();
-                foreach ($village as $k => $v){
-                    $res['townResult'][$key]['village'][$k]['id'] = $v['id'];
-                    $res['townResult'][$key]['village'][$k]['name'] = $v['name'];
-                    $person = D('Person')->where(array('villageid'=>$villageid))->select();
-                    foreach ($person as $ki => $vi){
-                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['id'] = $vi['id'];
-                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['name'] = $vi['name'];
-                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['age'] = $vi['age'];
-                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['phone'] = $vi['phone'];
-                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['address'] = $vi['address'];
-                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['iden'] = $vi['iden'];
-                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['bank'] = $vi['bank'];
-                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['banknum'] = $vi['banknum'];
-                        $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['headimg'] = $vi['headimg'];
-                        $result['personsResult'] = $res['townResult'][$key]['village'][$k]['personsResult'][$ki];
-
-                    }
-                }
-
-            }
-            $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
-            $data['bstatus']['desc'] = '获取成功！';
-            $data['data'] = $result;
-        }else{
-            $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-            $data['bstatus']['desc'] = '获取失败！';
+        if(empty($key)||empty($b)){
+            $data['bstatus']['code'] = '变量获取失败';
             $data['data'] = '';
-        }
+        }else {
+            $b = $this->caesar->clientDecode($key, $b);
+            $param = json_decode($b);
+            $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
+            if ($islogin) {
+                $villageid = I("post.villageid");
+                $pageSize = I("post.pageSize");
+                $pageNo = I("post.pageNo");
+                $towns = D("Town")->select();
+                foreach ($towns as $key => $val) {
+                    $res['townResult'][$key]['id'] = $val['id'];
+                    $res['townResult'][$key]['name'] = $val['name'];
+                    $village = D('Village')->where(array('townid' => $val['id']))->select();
+                    foreach ($village as $k => $v) {
+                        $res['townResult'][$key]['village'][$k]['id'] = $v['id'];
+                        $res['townResult'][$key]['village'][$k]['name'] = $v['name'];
+                        $person = D('Person')->where(array('villageid' => $villageid))->select();
+                        foreach ($person as $ki => $vi) {
+                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['id'] = $vi['id'];
+                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['name'] = $vi['name'];
+                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['age'] = $vi['age'];
+                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['phone'] = $vi['phone'];
+                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['address'] = $vi['address'];
+                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['iden'] = $vi['iden'];
+                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['bank'] = $vi['bank'];
+                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['banknum'] = $vi['banknum'];
+                            $res['townResult'][$key]['village'][$k]['personsResult'][$ki]['headimg'] = $vi['headimg'];
+                            $result['personsResult'] = $res['townResult'][$key]['village'][$k]['personsResult'][$ki];
 
+                        }
+                    }
+
+                }
+                $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
+                $data['bstatus']['desc'] = '获取成功！';
+                $data['data'] = $result;
+            } else {
+                $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
+                $data['bstatus']['desc'] = '获取失败！';
+                $data['data'] = '';
+            }
+        }
         echo $this->caesar->clientEncode($key, json_encode($data));
     }
 
