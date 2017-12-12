@@ -99,11 +99,11 @@ class CustomerController extends AppBaseController
             $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
             if ($islogin) {
                 $towns = D("Town")->field("id,name")->select();
-                foreach ($towns as $key => $val) {
+                foreach ($towns as $k1 => $val) {
                     $village = D('Village')->where(array('townid' => $val['id']))->select();
                     foreach ($village as $k => $v) {
-                        $towns[$key]['village'][$k]['id'] = $v['id'];
-                        $towns[$key]['village'][$k]['name'] = $v['name'];
+                        $towns[$k1]['village'][$k]['id'] = $v['id'];
+                        $towns[$k1]['village'][$k]['name'] = $v['name'];
                     }
                 }
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_SUCCESS');
