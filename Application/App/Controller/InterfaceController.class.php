@@ -43,7 +43,7 @@ class InterfaceController extends AppBaseController{
             $key = I("post.key");
             $b = I("post.b");
             if($key && $b){
-                $b = $this->caesar->clientdesode($key, $b);
+                $b = $this->caesar->clientDecode($key, $b);
                 $param=json_desode($b,true);
 
                 $login =  $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
@@ -83,7 +83,7 @@ class InterfaceController extends AppBaseController{
             $key = I("post.key");
             $b = I("post.b");
             if($key && $b ){
-                $b = $this->caesar->clientdesode($key, $b);
+                $b = $this->caesar->clientDecode($key, $b);
                 $param=json_desode($b,true);
 
                 $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
@@ -122,7 +122,7 @@ class InterfaceController extends AppBaseController{
             $key = I("post.key");
             $b = I("post.b");
             if($key && $b){
-                $b = $this->caesar->clientdesode($key, $b);
+                $b = $this->caesar->clientDecode($key, $b);
                 $param=json_desode($b,true);
 
                 $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
