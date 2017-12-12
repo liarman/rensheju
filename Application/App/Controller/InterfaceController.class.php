@@ -165,15 +165,15 @@ class InterfaceController extends AppBaseController{
                     if($param['deviceid'] && $param['shareid'] && $param['uk']){
                         $data=http("https://api.iermu.com/v2/pcs/device",$param);
                         $data=json_decode($data,true);
-                        $equipment['rtmp']=$data['url'];
-                        $equipment['status']=$data['status'];
+                        $result['rtmp']=$data['url'];
+                        $result['status']=$data['status'];
                         if($equipment['status']==0){
                             $data['bstatus']['code']=-2;
                             $data['bstatus']['des']='设备已离线或取消分享';
                            }else {
                             $data['bstatus']['code']=0;
                             $data['bstatus']['des']='获取成功';
-                            $data['cameraResult']=$equipment;
+                            $data['data']=$result;
                         }
                     }else {
                         $data['bstatus']['code']=-1;
