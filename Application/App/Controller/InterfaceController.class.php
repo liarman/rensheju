@@ -24,11 +24,11 @@ class InterfaceController extends AppBaseController{
             $b = I("post.b");
             if(empty($key)||empty($b)){
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-                $data['bstatus']['desc'] = '获取失败！';
+                $data['bstatus']['des'] = '获取失败！';
                 $data['noticesResult'] = '';
             }else {
-                $b = $this->caesar->clientDecode($key, $b);
-                $param=json_decode($b,true);
+                $b = $this->caesar->clientdesode($key, $b);
+                $param=json_desode($b,true);
 
                 $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
@@ -43,11 +43,11 @@ class InterfaceController extends AppBaseController{
                     $notice = D('Notice')->query($sql, $param);
 
                     $data['bstatus']['code'] = 0;
-                    $data['bstatus']['message'] = '获取成功';
+                    $data['bstatus']['des'] = '获取成功';
                     $data['data']['noticesResult'] = $notice;
                 }else{
                     $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
-                    $data['bstatus']['message'] = '登录失效，请重新登录';
+                    $data['bstatus']['des'] = '登录失效，请重新登录';
                 }
             }
             echo $this->caesar->clientEncode($key, json_encode($data));
@@ -65,11 +65,11 @@ class InterfaceController extends AppBaseController{
             $b = I("post.b");
             if(empty($key)||empty($b)){
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-                $data['bstatus']['desc'] = '获取失败！';
+                $data['bstatus']['des'] = '获取失败！';
                 $data['data']['personsResult'] = '';
             }else {
-                $b = $this->caesar->clientDecode($key, $b);
-                $param=json_decode($b,true);
+                $b = $this->caesar->clientdesode($key, $b);
+                $param=json_desode($b,true);
 
                 $login =  $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
@@ -85,11 +85,11 @@ class InterfaceController extends AppBaseController{
                     $workers = D('Worker')->query($sql, $param);
 
                     $data['bstatus']['code'] = 0;
-                    $data['bstatus']['message'] = '获取成功';
+                    $data['bstatus']['des'] = '获取成功';
                     $data['data']['personsResult'] = $workers;
                 }else{
                     $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
-                    $data['bstatus']['message'] = '登录失效，请重新登录';
+                    $data['bstatus']['des'] = '登录失效，请重新登录';
                 }
             }
 
@@ -107,11 +107,11 @@ class InterfaceController extends AppBaseController{
             $b = I("post.b");
             if(empty($key)||empty($b)){
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-                $data['bstatus']['desc'] = '获取失败！';
+                $data['bstatus']['des'] = '获取失败！';
                 $data['data']['camerasResult'] = '';
             }else {
-                $b = $this->caesar->clientDecode($key, $b);
-                $param=json_decode($b,true);
+                $b = $this->caesar->clientdesode($key, $b);
+                $param=json_desode($b,true);
 
                 $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
@@ -126,11 +126,11 @@ class InterfaceController extends AppBaseController{
                     $cameras = D('Equipment')->query($sql, $param);
 
                     $data['bstatus']['code'] = 0;
-                    $data['bstatus']['message'] = '获取成功';
+                    $data['bstatus']['des'] = '获取成功';
                     $data['data']['cameras'] = $cameras;
                 }else{
                     $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
-                    $data['bstatus']['message'] = '登录失效，请重新登录';
+                    $data['bstatus']['des'] = '登录失效，请重新登录';
                 }
             }
 
@@ -148,11 +148,11 @@ class InterfaceController extends AppBaseController{
             $b = I("post.b");
             if(empty($key)||empty($b)){
                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-                $data['bstatus']['desc'] = '获取失败！';
+                $data['bstatus']['des'] = '获取失败！';
                 $data['data'] = '';
             }else {
-                $b = $this->caesar->clientDecode($key, $b);
-                $param=json_decode($b,true);
+                $b = $this->caesar->clientdesode($key, $b);
+                $param=json_desode($b,true);
 
                 $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
@@ -164,7 +164,7 @@ class InterfaceController extends AppBaseController{
                     $param['type']='rtmp';
                     if($param['deviceid'] && $param['shareid'] && $param['uk']){
                         $video=http("https://api.iermu.com/v2/pcs/device",$param);
-                        $video=json_decode($video,true);
+                        $video=json_desode($video,true);
                         $result['name']=$equipment['name'];
                         $result['rtmp']=$video['url'];
                         $result['status']=$video['status'];
@@ -182,7 +182,7 @@ class InterfaceController extends AppBaseController{
                     }
                 }else{
                     $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
-                    $data['bstatus']['message'] = '登录失效，请重新登录';
+                    $data['bstatus']['des'] = '登录失效，请重新登录';
                 }
             }
 
