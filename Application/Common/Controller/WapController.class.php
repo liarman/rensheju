@@ -40,7 +40,7 @@ class WapController extends BaseController{
 				$scope='snsapi_base';
 			}*/
 
-			if ( (!$_GET['wecha_id'] || urldecode($_GET['wecha_id']) == '{wechat_id}') && $_GET['wecha_id'] != 'no' && !isset($_GET['code'])){
+			if ( !$_GET['wecha_id']  && $_GET['wecha_id'] != 'no' && !isset($_GET['code'])){
 				$customeUrl=$this->siteUrl.$_SERVER['REQUEST_URI'];
 				
 				$oauthUrl='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.$this->_appid.'&redirect_uri='.urlencode($customeUrl).'&response_type=code&scope='.$scope.'&state=oauth#wechat_redirect';
@@ -51,7 +51,6 @@ class WapController extends BaseController{
 
 			if (isset($_GET['code']) && isset($_GET['state']) && ($_GET['state']=='oauth')){
 				$rt=$this->curlGet('https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$this->_appid.'&secret='.$this->_secret.'&code='.$_GET['code'].'&grant_type=authorization_code');
-				
 				$jsonrt=json_decode($rt,1);
 				$openid= isset( $jsonrt['openid'] ) ? $jsonrt['openid'] : "";
 				$access_token = isset( $jsonrt['access_token'] ) ? $jsonrt['access_token'] : "" ;
@@ -109,7 +108,7 @@ class WapController extends BaseController{
 			
 			$this->wecha_id=$_SESSION[$session_openid_name];
 		}
-		//print_r($this->wecha_id);die;
+		
 		if($this->wecha_id&&!preg_match("/^[0-9a-zA-Z_\-\s]{3,82}$/",$this->wecha_id)){
 			exit('error openid:'.$this->wecha_id);
 		}
