@@ -132,7 +132,9 @@ class CustomerController extends AppBaseController
                 $villageid = I("post.villageId");
                 $pageSize = I("post.pageSize");
                 $pageNo = I("post.pageNo");
-                $person = D('Person')->where(array('villageid' => $villageid ))->limit($pageSize)->page($pageNo)->select();
+                $offset = ($pageNo - 1) * $pageSize;
+                $data['data']['totalNum']=D('Person')->where(array('villageid' => $villageid ))->count();
+                $person = D('Person')->where(array('villageid' => $villageid ))->limit($offset,$pageSize)->page($pageNo)->select();
                 foreach ($person as $k => $v){
 
                     $res['personsResult']['id'] = $person[$k]['id'];
