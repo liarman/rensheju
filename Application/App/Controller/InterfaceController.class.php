@@ -112,6 +112,7 @@ class InterfaceController extends AppBaseController{
                     $sql .= " limit %d,%d";
                     array_push($param, $offset);
                     array_push($param, $pageSize);
+                    $data['data']['totalNum'] =  D('Equipment')->count();
                     $cameras = D('Equipment')->query($sql, $param);
 
                     $data['bstatus']['code'] = 0;
