@@ -26,10 +26,7 @@ class CustomerController extends AppBaseController
         //if(IS_POST){
         $key = I("post.key");
         $b = I("post.b");
-        if(empty($key)||empty($b)){
-            $data['bstatus']['code'] = '变量获取失败';
-            $data['data'] = '';
-        }else{
+        if(!empty($key)||!empty($b)){
             $b = $this->caesar->clientDecode($key, $b);
             $param = json_decode($b,true);
             $phone = $param['phone'];
@@ -61,8 +58,10 @@ class CustomerController extends AppBaseController
                 $data['bstatus']['des'] = '登录失败';
                 $data['data'] = '';
             }
-        }
+
             echo $this->caesar->clientEncode($key, json_encode($data));
+        }
+
             //}
     }
 
@@ -74,19 +73,17 @@ class CustomerController extends AppBaseController
         //if(IS_POST){
             $key = I("post.key");
             $b = I("post.b");
-        if(empty($key)||empty($b)){
-            $data['bstatus']['code'] = '变量获取失败';
-            $data['data'] = '';
-        }else {
+        if(!empty($key)||!empty($b)){
             $b = $this->caesar->clientDecode($key, $b);
             $param = json_decode($b,true);
             D("LoginLogger")->where(array('customer_Id' => $param['cparam']['userId']))->delete();
             $data['bstatus']['code'] = 0;
             $data['bstatus']['des'] = '退出成功！';
             $data['data'] = '';
-        }
+
             echo $this->caesar->clientEncode($key, json_encode($data));
-        //}
+        }
+
     }
 
     /**
@@ -96,10 +93,7 @@ class CustomerController extends AppBaseController
     {
         $key = I("post.key");
         $b = I("post.b");
-        if(empty($key)||empty($b)){
-            $data['bstatus']['code'] = '变量获取失败';
-            $data['data'] = '';
-        }else {
+        if(!empty($key)||!empty($b)){
             $b = $this->caesar->clientDecode($key, $b);
             $param = json_decode($b,true);
             $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
@@ -120,8 +114,9 @@ class CustomerController extends AppBaseController
                 $data['bstatus']['des'] = '获取失败！';
                 $data['data'] = '';
             }
+            echo $this->caesar->clientEncode($key, json_encode($data));
         }
-        echo $this->caesar->clientEncode($key, json_encode($data));
+
     }
     /**
      * 六员一岗接口
@@ -129,10 +124,7 @@ class CustomerController extends AppBaseController
     public function person(){
         $key = I("post.key");
         $b = I("post.b");
-        if(empty($key)||empty($b)){
-            $data['bstatus']['code'] = '变量获取失败';
-            $data['data'] = '';
-        }else {
+        if(!empty($key)||!empty($b)){
             $b = $this->caesar->clientDecode($key, $b);
             $param = json_decode($b,true);
             $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
@@ -164,9 +156,8 @@ class CustomerController extends AppBaseController
                 $data['data'] = '';
             }
 
-            }
-
-        echo $this->caesar->clientEncode($key, json_encode($data));
+            echo $this->caesar->clientEncode($key, json_encode($data));
+        }
 
     }
 
