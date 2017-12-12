@@ -26,7 +26,7 @@ class CustomerController extends AppBaseController
         //if(IS_POST){
         $key = I("post.key");
         $b = I("post.b");
-        if(!empty($key)||!empty($b)){
+        if($key && $b){
             $b = $this->caesar->clientDecode($key, $b);
             $param = json_decode($b,true);
             $phone = $param['phone'];
@@ -73,7 +73,7 @@ class CustomerController extends AppBaseController
         //if(IS_POST){
             $key = I("post.key");
             $b = I("post.b");
-        if(!empty($key)||!empty($b)){
+        if($key && $b){
             $b = $this->caesar->clientDecode($key, $b);
             $param = json_decode($b,true);
             D("LoginLogger")->where(array('customer_Id' => $param['cparam']['userId']))->delete();
@@ -93,7 +93,7 @@ class CustomerController extends AppBaseController
     {
         $key = I("post.key");
         $b = I("post.b");
-        if(!empty($key)||!empty($b)){
+        if($key && $b){
             $b = $this->caesar->clientDecode($key, $b);
             $param = json_decode($b,true);
             $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
@@ -124,7 +124,7 @@ class CustomerController extends AppBaseController
     public function person(){
         $key = I("post.key");
         $b = I("post.b");
-        if(!empty($key)||!empty($b)){
+        if($key && $b){
             $b = $this->caesar->clientDecode($key, $b);
             $param = json_decode($b,true);
             $islogin = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
