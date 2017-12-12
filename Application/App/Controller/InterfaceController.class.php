@@ -60,16 +60,16 @@ class InterfaceController extends AppBaseController{
      *获取企业用工人员列表
      */
     public function getWorkers(){
-     if(IS_POST){
+        if(IS_POST){
             $key = I("post.key");
             $b = I("post.b");
-             if(empty($key)||empty($b)){
-                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-                 $data['bstatus']['desc'] = '获取失败！';
-                 $data['personsResult'] = '';
-             }else {
-                 $b = $this->caesar->clientDecode($key, $b);
-                 $param=json_decode($b,true);
+            if(empty($key)||empty($b)){
+                $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
+                $data['bstatus']['desc'] = '获取失败！';
+                $data['personsResult'] = '';
+            }else {
+                $b = $this->caesar->clientDecode($key, $b);
+                $param=json_decode($b,true);
 
                 $login =  $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
@@ -87,11 +87,11 @@ class InterfaceController extends AppBaseController{
                     $data['bstatus']['code'] = 0;
                     $data['bstatus']['message'] = '获取成功';
                     $data['personsResult'] = $workers;
-          }else{
+                }else{
                     $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
                     $data['bstatus']['message'] = '登录失效，请重新登录';
                 }
-         }
+            }
 
             echo $this->caesar->clientEncode($key, json_encode($data));
         }
@@ -102,16 +102,16 @@ class InterfaceController extends AppBaseController{
      *获取监控设备列表
      */
     public function getCameras(){
-     if(IS_POST){
+        if(IS_POST){
             $key = I("post.key");
             $b = I("post.b");
-             if(empty($key)||empty($b)){
-                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-                 $data['bstatus']['desc'] = '获取失败！';
-                 $data['camerasResult'] = '';
-             }else {
-                 $b = $this->caesar->clientDecode($key, $b);
-                 $param=json_decode($b,true);
+            if(empty($key)||empty($b)){
+                $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
+                $data['bstatus']['desc'] = '获取失败！';
+                $data['camerasResult'] = '';
+            }else {
+                $b = $this->caesar->clientDecode($key, $b);
+                $param=json_decode($b,true);
 
                 $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
@@ -128,11 +128,11 @@ class InterfaceController extends AppBaseController{
                     $data['bstatus']['code'] = 0;
                     $data['bstatus']['message'] = '获取成功';
                     $data['data']['cameras'] = $cameras;
-               }else{
+                }else{
                     $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
                     $data['bstatus']['message'] = '登录失效，请重新登录';
                 }
-             }
+            }
 
             echo $this->caesar->clientEncode($key, json_encode($data));
         }
@@ -143,16 +143,16 @@ class InterfaceController extends AppBaseController{
      *获取监控设备详情
      */
     public function getCameraDetail(){
-     if(IS_POST){
+        if(IS_POST){
             $key = I("post.key");
             $b = I("post.b");
-             if(empty($key)||empty($b)){
-                 $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
-                 $data['bstatus']['desc'] = '获取失败！';
-                 $data['data'] = '';
-             }else {
-                 $b = $this->caesar->clientDecode($key, $b);
-                 $param=json_decode($b,true);
+            if(empty($key)||empty($b)){
+                $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_FAIL');
+                $data['bstatus']['desc'] = '获取失败！';
+                $data['data'] = '';
+            }else {
+                $b = $this->caesar->clientDecode($key, $b);
+                $param=json_decode($b,true);
 
                 $login = $this->checkIsLonginUser($param['cparam']['userId'], $param['cparam']['token']);
                 if($login) {
@@ -163,15 +163,15 @@ class InterfaceController extends AppBaseController{
                     $param['uk']=$equipment['uk'];
                     $param['type']='rtmp';
                     if($param['deviceid'] && $param['shareid'] && $param['uk']){
-                        $data=http("https://api.iermu.com/v2/pcs/device",$param);
-                        $data=json_decode($data,true);
+                        $video=http("https://api.iermu.com/v2/pcs/device",$param);
+                        $video=json_decode($video,true);
                         $result['name']=$equipment['name'];
-                        $result['rtmp']=$data['url'];
-                        $result['status']=$data['status'];
+                        $result['rtmp']=$video['url'];
+                        $result['status']=$video['status'];
                         if($equipment['status']==0){
                             $data['bstatus']['code']=-2;
                             $data['bstatus']['des']='设备已离线或取消分享';
-                           }else {
+                        }else {
                             $data['bstatus']['code']=0;
                             $data['bstatus']['des']='获取成功';
                             $data['data']=$result;
@@ -180,11 +180,11 @@ class InterfaceController extends AppBaseController{
                         $data['bstatus']['code']=-1;
                         $data['bstatus']['des']='设备号为空,暂时无法播放';
                     }
-            }else{
+                }else{
                     $data['bstatus']['code'] = C('APP_STATUS.STATUS_CODE_NOT_LOGIN');
                     $data['bstatus']['message'] = '登录失效，请重新登录';
                 }
-             }
+            }
 
             echo $this->caesar->clientEncode($key, json_encode($data));
         }
