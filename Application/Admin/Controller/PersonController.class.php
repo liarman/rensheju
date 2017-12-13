@@ -40,7 +40,7 @@ class PersonController extends AdminBaseController
     /**
      * 添加菜单
      */
-    public function add()
+    public function addPerson()
     {
         if(IS_POST){
             $data["name"] = I("post.name");
@@ -67,7 +67,7 @@ class PersonController extends AdminBaseController
     /**
      * 修改菜单
      */
-    public function edit()
+    public function editPerson()
     {
         if(IS_POST){
             $data['id']=I('post.id');
@@ -98,7 +98,7 @@ class PersonController extends AdminBaseController
     /**
      * 删除菜单
      */
-    public function delete()
+    public function deletePerson()
     {
         $id = I('get.id');
         $map = array(
