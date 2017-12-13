@@ -32,8 +32,10 @@ class AppController extends AdminBaseController{
 	 */
 	public function add(){
 	    $data['phone'] = I('post.phone');
-        $data['password'] = md5(I('post.password'));
+        $data['password'] = I('post.password');
+        //print_r($data['password']);die;
         $data['villageid'] = I('post.villageid');
+        //print_r($data);die;
         $result=D('Customer')->addData($data);
         if($result){
             $message['status']=1;
