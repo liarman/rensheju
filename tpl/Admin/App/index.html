@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="__EASYUI__/themes/default/easyui.css" rel="stylesheet" />
+    <link href="__EASYUI__/themes/color.css" rel="stylesheet" />
+    <link href="__EASYUI__/themes/icon.css" rel="stylesheet" />
+    <script src="__EASYUI__/jquery.min.js"></script>
+    <script src="__EASYUI__/jquery.easyui.min.js"></script>
+    <script src="__EASYUI__/formatter.js"></script>
+    <script src="__EASYUI__/extend/validate.js"></script>
+    <script src="__EASYUI__/locale/easyui-lang-zh_CN.js"></script>
+    <script src="__EASYUI__/common.js"></script>
+    <script type="text/javascript">
+        var addCustomerUrl="{:U('Admin/App/add')}";
+        var editCustomerUrl="{:U('Admin/App/edit')}";
+        var deleteCustomerUrl="{:U('Admin/App/delete')}";
+    </script>
+</head>
+<body>
+<div id='Loading' style="position:absolute;z-index:1000;top:0px;left:0px;width:100%;height:100%;background:#fff ;text-align:center;padding-top: 10%;">
+    <h1><image src='__PUBLIC_IMAGES__/loading3.gif'/></h1></div>
+<script src="__ADMIN_JS__/app.js" type="text/javascript" charset="utf-8"></script>
+<table id="CustomerGrid" class="easyui-datagrid" style="width:92%;height:800px" url="{:U('Admin/App/ajaxCustomerList')}" pagination="true"  toolbar="#toolbar_Customer" singleSelect="true" rownumbers="true">
+    <thead>
+    <tr>
+        <th field="phone" width="200" >手机号</th>
+        <th field="villagename" width="200" >所属村镇</th>
+    </tr>
+    </thead>
+</table>
+<div id="toolbar_Customer">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addCustomer()">添加</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editCustomer()">编辑</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyCustomer()">删除</a>
+</div>
+<!-- 添加 -->
+<div id="addCustomer" class="easyui-dialog" title="添加" style="width:400px;padding:10px 20px;" closed="true" modal="true">
+    <form id="addCustomerForm" method="post">
+        <table>
+            <tr>
+                <td>手机号:</td>
+                <td><input name="phone" class="easyui-textbox" data-options="delay:1000,required:true,validType:'Customer[6,20]' " /></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input name="password"  class="easyui-passwordbox" data-options="delay:1000,required:true,validType:'password[6,20]' " /></td>
+            </tr>
+            <tr>
+                <td>所属村镇:</td>
+                <td>
+                    <input id="pid" name="villageid" url="{:U('Admin/App/ajaxVillageList')}" valueField="id" textField="name">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="addCustomerSubmit()" style="width:90px">保存</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#addCustomer').dialog('close')" style="width:90px">取消</a></td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+<div id="editCustomer" class="easyui-dialog" title="编辑" style="width:400px;padding:10px 20px;" closed="true" modal="true">
+    <form id="editCustomerForm" method="post">
+        <input type="hidden" name="id" value="">
+        <table>
+            <tr>
+                <td>手机号:</td>
+                <td><input name="username" class="easyui-textbox" data-options="delay:1000,required:true,validType:'Customer[6,20]' " /></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input name="password" prompt="不填写则为原密码"  class="easyui-passwordbox" /></td>
+            </tr>
+            <tr>
+                <td>所属村镇:</td>
+                <td>
+                    <input id="vpid" name="villageid" url="{:U('Admin/App/ajaxVillageList')}" valueField="id" textField="name">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="editCustomerSubmit()" style="width:90px">保存</a>
+                    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#editCustomer').dialog('close')" style="width:90px">取消</a></td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+
+</body>
+</html>
