@@ -31,7 +31,7 @@ class AppController extends AdminBaseController{
 	 * elements
 	 */
 	public function add(){
-	    $data['username'] = I('post.username');
+	    $data['phone'] = I('post.phone');
         $data['password'] = md5(I('post.password'));
         $data['villageid'] = I('post.villageid');
         $result=D('Customer')->addData($data);
@@ -47,7 +47,7 @@ class AppController extends AdminBaseController{
 
     public function edit(){
         $data['id'] = I('post.id');
-        $data['username'] = I('post.username');
+        $data['phone'] = I('post.phone');
         $data['password'] = md5(I('post.password'));
         $data['villageid'] = I('post.villageid');
         $map=array(
