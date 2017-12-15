@@ -22,6 +22,8 @@ class WorkerController extends AdminBaseController
             $data = D("Worker")->select();
             foreach ($data as $k => $v){
                 $res = D("Village")->where(array('id'=>$v['villageid']))->field('name')->find();
+                $res1 = D("Town")->where(array('id'=>$v['townid']))->field('name')->find();
+                $data[$k]['townname'] = $res1['name'];
                 $data[$k]['villagename'] = $res['name'];
             }
         }else{
@@ -29,6 +31,8 @@ class WorkerController extends AdminBaseController
             $data = D("Worker")->where(array('townid'=>$townid))->select();
             foreach ($data as $k => $v){
                 $res = D("Village")->where(array('id'=>$v['villageid']))->field('name')->find();
+                $res1 = D("Town")->where(array('id'=>$v['townid']))->field('name')->find();
+                $data[$k]['townname'] = $res1['name'];
                 $data[$k]['villagename'] = $res['name'];
             }
         }
@@ -42,6 +46,8 @@ class WorkerController extends AdminBaseController
     public function add()
     {
         if(IS_POST){
+            $townid = $_SESSION['user']['townid'];
+            $data['townid']=$townid;
             $data["name"] = I("post.name");
             $data["age"] = I("post.age");
             $data["phone"] = I("post.phone");
