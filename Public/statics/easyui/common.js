@@ -11,7 +11,6 @@ $.parser.onComplete = function(){
      if(pc) clearTimeout(pc);
     pc = setTimeout(closes, 500);
 }
-
 //图片添加路径
 function imgFormatter(value,row,index){
     if('' != value && null != value){
