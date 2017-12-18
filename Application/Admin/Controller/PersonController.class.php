@@ -43,22 +43,28 @@ class PersonController extends AdminBaseController
     public function addPerson()
     {
         if(IS_POST){
-            $data["name"] = I("post.name");
-            $data["age"] = I("post.age");
-            $data["phone"] = I("post.phone");
-            $data["address"] = I("post.address");
-            $data["iden"] = I("post.iden");
-            $data["bank"] = I("post.bank");
-            $data["banknum"] = I("post.banknum");
-            $data["headimg"] = I("post.headimg");
-            $result = D('Person')->addData($data);
+            $townid = $_SESSION['user']['townid'];
+            if($townid){
+                $data["name"] = I("post.name");
+                $data["age"] = I("post.age");
+                $data["phone"] = I("post.phone");
+                $data["address"] = I("post.address");
+                $data["iden"] = I("post.iden");
+                $data["bank"] = I("post.bank");
+                $data["banknum"] = I("post.banknum");
+                $data["headimg"] = I("post.headimg");
+                $result = D('Person')->addData($data);
 
-            if ($result) {
-                 $message['status'] = 1;
-                 $message['message'] = '添加成功';
-            } else {
-                $message['status'] = 0;
-                $message['message'] = '添加失败';
+                if ($result) {
+                     $message['status'] = 1;
+                     $message['message'] = '添加成功';
+                } else {
+                    $message['status'] = 0;
+                    $message['message'] = '添加失败';
+                }
+            }else{
+                $message['status']=0;
+                $message['message']='管理员账号不能添加六员一岗数据';
             }
             $this->ajaxReturn($message, 'JSON');
             }
@@ -70,23 +76,29 @@ class PersonController extends AdminBaseController
     public function editPerson()
     {
         if(IS_POST){
-            $data['id']=I('post.id');
-            $data["name"] = I("post.name");
-            $data["age"] = I("post.age");
-            $data["phone"] = I("post.phone");
-            $data["address"] = I("post.address");
-            $data["iden"] = I("post.iden");
-            $data["bank"] = I("post.bank");
-            $data["banknum"] = I("post.banknum");
-            $data["headimg"] = I("post.headimg");
-            $where['id']=$data['id'];
-            $result=D('Person')->editData($where,$data);
-            if($result){
-                $message['status']=1;
-                $message['message']='保存成功';
-            }else {
+            $townid = $_SESSION['user']['townid'];
+            if($townid) {
+                $data['id'] = I('post.id');
+                $data["name"] = I("post.name");
+                $data["age"] = I("post.age");
+                $data["phone"] = I("post.phone");
+                $data["address"] = I("post.address");
+                $data["iden"] = I("post.iden");
+                $data["bank"] = I("post.bank");
+                $data["banknum"] = I("post.banknum");
+                $data["headimg"] = I("post.headimg");
+                $where['id'] = $data['id'];
+                $result = D('Person')->editData($where, $data);
+                if ($result) {
+                    $message['status'] = 1;
+                    $message['message'] = '保存成功';
+                } else {
+                    $message['status'] = 0;
+                    $message['message'] = '保存失败';
+                }
+            }else{
                 $message['status']=0;
-                $message['message']='保存失败';
+                $message['message']='管理员账号不能修改六员一岗数据';
             }
         }else {
             $message['status']=0;
@@ -100,17 +112,24 @@ class PersonController extends AdminBaseController
      */
     public function deletePerson()
     {
-        $id = I('get.id');
-        $map = array(
-            'id' => $id
-        );
-        $result = D('Person')->deleteData($map);
-        if ($result) {
-            $message['status'] = 1;
-            $message['message'] = '删除成功';
-        } else {
-            $message['status'] = 0;
-            $message['message'] = '删除失败';
+        $townid = $_SESSION['user']['townid'];
+        if($townid) {
+            $id = I('get.id');
+            $map = array(
+                'id' => $id
+            );
+            $result = D('Person')->deleteData($map);
+            if ($result) {
+                $message['status'] = 1;
+                $message['message'] = '删除成功';
+            } else {
+                $message['status'] = 0;
+                $message['message'] = '删除失败';
+            }
+        }else{
+            $message['status']=0;
+            $message['message']='管理员账号不能删除六员一岗数据';
+
         }
         $this->ajaxReturn($message, 'JSON');
     }
