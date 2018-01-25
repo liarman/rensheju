@@ -18,6 +18,7 @@ class AppController extends AdminBaseController{
             $res = D("Village")->where(array('id'=>$v['villageid']))->field('name')->find();
             $data[$k]['villagename'] = $res['name'];
         }
+        //print_r($data);die;
         $result["rows"] = $data;
         $this->ajaxReturn($result, 'JSON');
     }

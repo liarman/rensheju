@@ -25,14 +25,14 @@
 <body style="padding: 0">
 <div id='Loading'><image src='__PUBLIC_IMAGES__/loading.gif'/>加载中....</div>
 <script src="__ADMIN_JS__/app.js" type="text/javascript" charset="utf-8"></script>
-<table id="CustomerGrid" class="easyui-datagrid" style="width:92%;height:800px" url="{:U('Admin/App/ajaxCustomerList')}" pagination="true"  toolbar="#toolbar_Customer" singleSelect="true" rownumbers="true">
+<table id="CustomerGrid" class="easyui-datagrid" style="width:92%;height:800px" url="{:U('Admin/App/ajaxCustomerList')}" pagination="true"  toolbar="#toolbar_customer" singleSelect="true" rownumbers="true" pageSize="20">
     <thead>
     <tr>
         <th field="phone" width="200" >手机号</th>
     </tr>
     </thead>
 </table>
-<div id="toolbar_Customer">
+<div id="toolbar_customer">
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="fa fa-plus" plain="true" onclick="addCustomer()">添加</a>
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="fa fa-edit" plain="true" onclick="editCustomer()">编辑</a>
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="fa fa-remove" plain="true" onclick="destroyCustomer()">删除</a>
